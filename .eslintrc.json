@@ -1,3 +1,7 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+    // disable noImplicitAny
+    "rules": {
+        "@typescript-eslint/no-explicit-any": "off"
+    },
+    "extends": ["next/core-web-vitals", "next/typescript"]
 }

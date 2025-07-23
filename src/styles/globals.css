@@ -3,25 +3,45 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --color-primary: 49 173 153;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@layer base {
+    h1 {
+        @apply font-montserrat text-5xl font-bold text-[#333333];
+    }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    h2 {
+        @apply font-poppins text-3xl font-semibold text-[#333333];
+    }
+
+    p {
+        @apply font-openSans text-base text-[#333333];
+    }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .font-cta {
+        @apply font-montserrat text-xl font-semibold text-white;
+    }
+}
+
+/* tailwind.config.js or postcss-compatible */
+::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
 }
