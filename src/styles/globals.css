@@ -8,15 +8,15 @@
 
 @layer base {
     h1 {
-        @apply font-montserrat text-5xl font-bold text-[#333333];
+        @apply text-5xl font-bold text-[#333333];
     }
 
     h2 {
-        @apply font-poppins text-3xl font-semibold text-[#333333];
+        @apply text-3xl font-semibold text-[#333333];
     }
 
     p {
-        @apply font-openSans text-base text-[#333333];
+        @apply text-base text-[#333333];
     }
 }
 
@@ -33,15 +33,15 @@
     }
 
     .font-cta {
-        @apply font-montserrat text-xl font-semibold text-white;
+        @apply text-xl font-semibold text-white;
     }
 }
 
 /* tailwind.config.js or postcss-compatible */
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }

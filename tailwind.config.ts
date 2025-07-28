@@ -13,17 +13,16 @@ const config: Config = {
                 primary: 'rgb(var(--color-primary) / <alpha-value>)',
             },
             fontFamily: {
-                montserrat: 'var(--font-montserrat)',
-                poppins: 'var(--font-poppins)',
-                openSans: 'var(--font-open-sans)',
+                gill: 'var(--font-gill)',
             },
             keyframes: {
                 'ring-draw': {
-                '0%': { opacity: '0', transform: 'scale(0.95)' },
-                '50%': { opacity: '1', transform: 'scale(1.05)' },
-                '100%': { opacity: '0', transform: 'scale(0.95)' },
+                    '0%': { opacity: '0', transform: 'scale(0.95)' },
+                    '50%': { opacity: '1', transform: 'scale(1.05)' },
+                    '100%': { opacity: '0', transform: 'scale(0.95)' },
                 },
-            },animation: {
+            },
+            animation: {
                 'ring-draw': 'ring-draw 1s linear infinite',
             },
         },
