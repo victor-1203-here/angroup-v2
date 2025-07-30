@@ -2,9 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
+import Header from "../components/header";
+
 const directors = [
   {
-    name: "Tan Than Kau",
+    name: "Tan Than Kau", 
     photo: "/images/about/Mr Tan.jpg",
     title: "Founder\nManaging Director",
     tagline: "Transforming passion into global energy solutions",
@@ -20,22 +22,29 @@ const directors = [
 export default function About() {
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>About Us - AN Group</title>
         <meta
           name="description"
           content="Learn more about AN Group, our values, mission, and team."
         />
-      </Head> */}
+      </Head>
+      <Header />
 
       {/* First Section */}
       <section className="relative h-screen w-full">
         <Image
           src="/images/about/pic_01.jpg"
           alt="About Us Story"
-          fill={true}
-          objectFit="cover"
-          className="object-cover" 
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'top',
+          }}
+          fill
           priority
         />
         <div className="absolute inset-0 bg-gray-700 bg-opacity-50"></div>
@@ -50,24 +59,10 @@ export default function About() {
       </section>
 
       {/* Second Section */}
-      <section className="relative flex flex-col md:flex-row justify-center bg-white min-h-screen">
-        <div className="flex items-center">
+      <section className="relative flex justify-center bg-white min-h-screen">
+        <div className="flex items-center flex-col-reverse md:flex-row">
           <div
-            className="
-              relative
-              z-0
-              flex justify-start
-              shadow-xl
-              p-8
-              bg-[#1c3e5d]
-              w-full
-              max-w-2xl
-              flex-shrink-0
-              md:w-2/3
-              md:mr-[-30px]   // Negative right margin for overlap
-            "
-            style={{ minHeight: '100vh' }}
-          >
+            className="relative z-0 flex justify-start shadow-xl p-8 bg-[#1c3e5d] w-full max-w-2xl flex-shrink-0 md:w-2/3 md:mr-[-30px] -mt-10 sm:-mt-16 md:-mt-8 lg:mt-0" style={{ minHeight: '100vh' }}>
             <div className="space-y-10 md:pr-20 md:pl-5 content-center max-w-xl ">
               <p className="text-white text-base sm:text-xl md:text-xl md:leading-10">
                 An Group is a leading player in the distribution of petroleum and chemical products. We are recognized as a sought-after one-stop partner due to our extensive service coverage and a proven track record of fulfilling the growing demand for fuel and chemicals. Our services also include efficient transportation solutions.
@@ -82,7 +77,7 @@ export default function About() {
           </div>
 
           <div className="z-10 flex justify-center md:justify-start items-center md:w-2/3 w-full mt-8 md:mt-0">
-            <div className="rounded-full shadow-black shadow-2xl overflow-hidden w-96 h-96 md:w-[32rem] md:h-[32rem] flex items-center justify-center">
+            <div className="rounded-full shadow-black shadow-2xl overflow-hidden w-72 h-72 md:w-[32rem] md:h-[32rem] flex items-center justify-center">
               <Image
                 src="/images/about/watching-backsot.jpeg"
                 alt="Refinery workers"
@@ -101,9 +96,15 @@ export default function About() {
         <Image
           src="/images/about/pic_02.jpg"
           alt="About Us Leaders"
-          fill={true}
-          objectFit="cover"
-          className="object-cover" 
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'top',
+          }}
+          fill
           priority
         />
         <div className="absolute inset-0 bg-gray-700 bg-opacity-30"></div>
@@ -117,50 +118,40 @@ export default function About() {
         </div>
       </section>
 
-      {/* Forth Section */}
-      <section className="py-16 bg-white h-screen w-full">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-20 mt-10">Board of Directors</h2>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-20">
+      {/* Forth Section */} 
+      <section className="pt-10 bg-white h-screen w-full md:py-14 lg:py-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-15 lg:mb-20 md:mt-8 lg:mt-10">Board of Directors</h2>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-15 lg:gap-20 mb-12 md:mb-0 lg:mb-0 pb-12 md:pb-0">
           {directors.map((d) => (
             <div
               key={d.name}
-              className="
-                bg-white 
-                rounded-xl 
-                shadow-black
-                shadow-lg 
-                overflow-hidden 
-                w-72      
-                h-[36rem]          
-                flex 
-                flex-col 
-                items-center 
-                text-center 
-                pb-8 
-                transition 
-              "
-            >
+              className="bg-white rounded-xl shadow-black shadow-lg overflow-hidden w-52 md:w-64 lg:w-72 h-[24rem] md:h-[36rem] lg:h-[36rem] flex flex-col items-center text-center pb-4 md:pb-6 lg:pb-8 transition">
               <div className="w-full h-80 relative mb-4"> 
                 <Image
                   src={d.photo}
                   alt={d.name}
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="top"
                   className="rounded-t-2xl"
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'top',
+                  }}
+                  fill
                   priority
                 />
               </div>
-              <div className="px-6 flex flex-col gap-8 h-1/2">
-                <h3 className="text-2xl font-semibold text-[#3f9c7f] text-left w-3/4">{d.name}</h3>
-                <p className="text-lg font-medium text-gray-700 whitespace-pre-line mb-2 text-left">{d.title}</p>
-                <p className="text-lg text-base text-left">&quot;{d.tagline}&quot;</p>
+              <div className="px-6 flex flex-col gap-4 md:gap-6 lg:gap-8 h-[47%] md:h-1/2 lg:h-1/2">
+                <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-[#3f9c7f] text-left w-3/4">{d.name}</h3>
+                <p className="text-sm md:text-md lg:text-lg font-medium text-gray-700 whitespace-pre-line mb-2 text-left">{d.title}</p>
+                <p className="text-xs md:text-md lg:text-lg text-base text-left">&quot;{d.tagline}&quot;</p>
               </div>
             </div>
           ))}
         </div>
       </section>
-
     </>
   );
 }

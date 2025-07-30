@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useEffect } from 'react';
 import { DefaultSeo } from 'next-seo';
 import type { AppProps } from 'next/app';
@@ -37,6 +38,9 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <QueryClientProvider client={queryClient}>
             <ReactLenis root>
+                <Head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                </Head>
                 <DefaultSeo
                     title={undefined}
                     defaultTitle="An Group"
@@ -51,7 +55,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 />
                 <NextNProgress color={'rgb(var(--color-primary))'} />
                 <div className={cn(gillSans.variable, 'font-gill flex min-h-screen flex-col bg-[#F4F4F4]')}>
-                    <main className={cn('flex-grow', !isHomePage && 'mt-14 md:mt-20')}>
+                    <main>
                         <PageTransition>
                             <Component {...pageProps} />
                         </PageTransition>
