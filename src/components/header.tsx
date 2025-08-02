@@ -90,7 +90,7 @@ export default function Header() {
                             <a
                             key={i}
                             href={href}
-                            className=""
+                            className="hover:text-[#38947e] transition-colors duration-200"
                             >
                             {label}
                             </a>
@@ -98,13 +98,14 @@ export default function Header() {
                     </nav>
 
                     <div className="flex items-center space-x-4 md:pl-20 lg:pl-20">
-                        <button className="focus:outline-none">
+                        <button type="button" aria-label="Open search" className="focus:outline-none hover:text-[#38947e] transition-colors duration-200">
                             <BsSearch size={20} />
                         </button>
-                        <button className="focus:outline-none">
+                        <button type="button" aria-label="Change language" className="focus:outline-none hover:text-[#38947e] transition-colors duration-200">
                             <BsGlobe2 size={20} />
                         </button>
                         <button
+                            type="button"
                             className={`md:hidden focus:outline-none`}
                             onClick={() => setIsOpen(!isOpen)}
                             aria-label="Open Menu"
@@ -121,7 +122,7 @@ export default function Header() {
                 `}
             >
                 <div className="flex justify-end py-6 px-2">
-                    <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+                    <button type="button" aria-label="Menu" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className={`h-6 w-6 fill-current line ${isOpen ? 'opened' : ''}`}

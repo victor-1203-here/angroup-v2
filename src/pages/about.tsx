@@ -141,7 +141,7 @@ export default function About() {
                 />
               </div>
               <div className="px-6 flex flex-col gap-4 md:gap-6 lg:gap-8 h-[47%] md:h-1/2 lg:h-1/2">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-[#3f9c7f] text-left w-3/4">{d.name}</h3>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-[#38947e] text-left w-3/4">{d.name}</h3>
                 <p className="text-sm md:text-md lg:text-lg font-medium text-gray-700 whitespace-pre-line mb-2 text-left">{d.title}</p>
                 <p className="text-xs md:text-md lg:text-lg text-base text-left">&quot;{d.tagline}&quot;</p>
               </div>

@@ -10,6 +10,7 @@ import { cn } from '@/configs/cn';
 import PageTransition from '@/layouts/PageTransition';
 import { gillSans } from '@/lib/fonts';
 import '@/styles/globals.css';
+import CookieConsent from "react-cookie-consent";
 
 import Footer from '../components/footer';
 import Header from '../components/header';
@@ -65,6 +66,21 @@ export default function App({ Component, pageProps }: AppProps) {
                         </PageTransition>
                     </main>
                     <Footer />
+                    <CookieConsent
+                        location="bottom"
+                        buttonText="Accept All"
+                        cookieName="siteCookieConsent"
+                        style={{ background: "#2B373B" }}
+                        buttonStyle={{ color: "#fff", background: "linear-gradient(180deg, #102a00, #00cca5)" }}
+                        declineButtonStyle={{ color: "#fff", background: "#c0392b", fontSize: "13px" }}
+                        enableDeclineButton
+                        declineButtonText="Decline"
+                    >
+                        This website uses cookies to enhance your experience.{" "}
+                        <a href="/cookies" style={{ color: "#3f9c7f", textDecoration: "underline" }}>
+                        Cookie Settings
+                        </a>
+                    </CookieConsent>
                 </div>
             </ReactLenis>
         </QueryClientProvider>
