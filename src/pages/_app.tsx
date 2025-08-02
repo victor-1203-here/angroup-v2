@@ -11,6 +11,9 @@ import PageTransition from '@/layouts/PageTransition';
 import { gillSans } from '@/lib/fonts';
 import '@/styles/globals.css';
 
+import Footer from '../components/footer';
+import Header from '../components/header';
+
 const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
@@ -54,12 +57,14 @@ export default function App({ Component, pageProps }: AppProps) {
                     ]}
                 />
                 <NextNProgress color={'rgb(var(--color-primary))'} />
-                <div className={cn(gillSans.variable, 'font-gill flex min-h-screen flex-col bg-[#F4F4F4]')}>
+                <div className={cn(gillSans.variable, 'font-gill')}>
+                    <Header />
                     <main>
                         <PageTransition>
                             <Component {...pageProps} />
                         </PageTransition>
                     </main>
+                    <Footer />
                 </div>
             </ReactLenis>
         </QueryClientProvider>

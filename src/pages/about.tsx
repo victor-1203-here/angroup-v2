@@ -2,8 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
-import Header from "../components/header";
-
 const directors = [
   {
     name: "Tan Than Kau", 
@@ -29,7 +27,6 @@ export default function About() {
           content="Learn more about AN Group, our values, mission, and team."
         />
       </Head>
-      <Header />
 
       {/* First Section */}
       <section className="relative h-screen w-full">
@@ -119,13 +116,13 @@ export default function About() {
       </section>
 
       {/* Forth Section */} 
-      <section className="pt-10 bg-white h-screen w-full md:py-14 lg:py-16">
+      <section className="pt-10 bg-white md:py-14 lg:py-16">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-15 lg:mb-20 md:mt-8 lg:mt-10">Board of Directors</h2>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-15 lg:gap-20 mb-12 md:mb-0 lg:mb-0 pb-12 md:pb-0">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-15 lg:gap-20 pb-12 md:pb-0">
           {directors.map((d) => (
             <div
               key={d.name}
-              className="bg-white rounded-xl shadow-black shadow-lg overflow-hidden w-52 md:w-64 lg:w-72 h-[24rem] md:h-[36rem] lg:h-[36rem] flex flex-col items-center text-center pb-4 md:pb-6 lg:pb-8 transition">
+              className="bg-white rounded-xl shadow-black shadow-lg w-52 md:w-64 lg:w-72 h-[24rem] md:h-[36rem] lg:h-[36rem] flex flex-col items-center text-center pb-4 md:pb-6 lg:pb-8">
               <div className="w-full h-80 relative mb-4"> 
                 <Image
                   src={d.photo}
