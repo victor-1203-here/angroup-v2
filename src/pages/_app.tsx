@@ -71,15 +71,28 @@ export default function App({ Component, pageProps }: AppProps) {
                         buttonText="Accept All"
                         cookieName="siteCookieConsent"
                         style={{ background: "#2B373B" }}
-                        buttonStyle={{ color: "#fff", background: "linear-gradient(180deg, #102a00, #00cca5)" }}
-                        declineButtonStyle={{ color: "#fff", background: "#c0392b", fontSize: "13px" }}
+                        buttonStyle={{
+                            color: "#fff",
+                            background: "linear-gradient(180deg, #102a00, #00cca5)",
+                            fontSize: "13px",
+                            padding: "8px 24px",
+                            borderRadius: "5px",
+                            border: "none",
+                            minWidth: "120px"
+                        }}
+                        declineButtonStyle={{
+                            color: "#fff",
+                            background: "linear-gradient(180deg, #892520, #c0392b)",
+                            fontSize: "13px",
+                            padding: "8px 24px",
+                            borderRadius: "5px",
+                            border: "none",
+                            minWidth: "120px"
+                        }}
                         enableDeclineButton
                         declineButtonText="Decline"
                     >
                         This website uses cookies to enhance your experience.{" "}
-                        <a href="/cookies" style={{ color: "#3f9c7f", textDecoration: "underline" }}>
-                        Cookie Settings
-                        </a>
                     </CookieConsent>
                 </div>
             </ReactLenis>
