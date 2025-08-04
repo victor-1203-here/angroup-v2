@@ -22,13 +22,9 @@ export default function About() {
     <>
       <Head>
         <title>About Us - AN Group</title>
-        <meta
-          name="description"
-          content="Learn more about AN Group, our values, mission, and team."
-        />
+        <meta name="description" content="Learn more about AN Group, our values, mission, and team."/>
       </Head>
 
-      {/* First Section */}
       <section className="relative h-screen w-full">
         <Image
           src="/images/about/pic_01.jpg"
@@ -55,11 +51,9 @@ export default function About() {
         </div>
       </section>
 
-      {/* Second Section */}
       <section className="relative flex justify-center bg-white min-h-screen">
         <div className="flex items-center flex-col-reverse md:flex-row">
-          <div
-            className="relative z-0 flex justify-start shadow-xl p-8 bg-[#1c3e5d] w-full max-w-2xl flex-shrink-0 md:w-2/3 md:mr-[-30px] -mt-10 sm:-mt-16 md:-mt-8 lg:mt-0" style={{ minHeight: '100vh' }}>
+          <div className="relative z-0 flex justify-start shadow-xl p-8 bg-[#1c3e5d] w-full max-w-2xl flex-shrink-0 md:w-2/3 md:mr-[-30px] -mt-10 sm:-mt-16 md:-mt-8 lg:mt-0" style={{ minHeight: '100vh' }}>
             <div className="space-y-10 md:pr-20 md:pl-5 content-center max-w-xl ">
               <p className="text-white text-base sm:text-xl md:text-xl md:leading-10">
                 An Group is a leading player in the distribution of petroleum and chemical products. We are recognized as a sought-after one-stop partner due to our extensive service coverage and a proven track record of fulfilling the growing demand for fuel and chemicals. Our services also include efficient transportation solutions.

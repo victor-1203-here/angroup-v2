@@ -1,4 +1,3 @@
-// pages/contact.js
 import Head from "next/head";
 import Image from "next/image";
 
@@ -112,7 +111,7 @@ export default function Contact() {
             <div className="relative z-10 flex-1 flex flex-col items-start justify-center text-left md:absolute md:bottom-4 md:left-4 md:items-start md:justify-end">
                 <div className="px-6 py-10 md:px-8 md:p-8 md:mx-12 [text-shadow:0_4px_10px_rgba(0,0,0,0.8)]">
                     <p className="text-sm md:text-2xl text-white/80 mb-2 tracking-wide">An Group</p>
-                    <h1 className="text-2xl md:text-4xl font-semibold text-white mb-4">Connect with us</h1>
+                    <h1 className="text-2xl md:text-4xl font-semibold text-white mb-4">Contact us</h1>
                     <p className="text-xl md:text-4xl text-white mb-6">
                     Have a question or need a quote?<br className="md:hidden" /> Reach out our team.
                     </p>
