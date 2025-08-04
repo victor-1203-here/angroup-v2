@@ -99,7 +99,6 @@ const Footer = () => {
     <footer className="bg-white border-t w-full">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex flex-col justify-between h-28 md:flex-row md:h-24">
-          {/* Links */}
           <div className="flex justify-center md:justify-end">
             <nav className="flex flex-row gap-6 text-xs text-gray-700 font-medium">
               <a href="/terms" className="hover:underline">Terms of Use</a>
@@ -125,7 +124,6 @@ const Footer = () => {
             </span>
           </div>
         </div>
-        {/* Modal */}
         <CookieSettingsModal
           open={showCookieModal}
           onClose={() => setShowCookieModal(false)}

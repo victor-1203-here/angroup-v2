@@ -1,6 +1,6 @@
-// Header.js
-import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useRef, useState, useEffect } from "react";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { BsSearch, BsGlobe2 } from "react-icons/bs";
 
@@ -14,10 +14,12 @@ const navLinks = [
 
 
 export default function Header() {
+    const router = useRouter();
+    const isWhiteBG = router.pathname === '/privacy' || router.pathname === '/terms';
     const [isOpen, setIsOpen] = useState(false);
     const [isScrollingUp, setIsScrollingUp] = useState(true);  
     const [showHeader, setShowHeader] = useState(true);      
-    const [isAtTop, setIsAtTop] = useState(true);             
+    const [isAtTop, setIsAtTop] = useState(true);    
     const lastScrollY = useRef(0);
     const threshold = 10; 
 
@@ -77,13 +79,13 @@ export default function Header() {
             <header
                 className={`
                     min-w-full fixed md:h-24 top-0 left-0 z-50 transition-transform transition-opacity duration-300 ease-in-out flex justify-end md:px-12 md:py-4 px-2 py-6
-                    ${isAtTop ? "bg-transparent text-white" : isScrollingUp ? "bg-white bg-opacity-80 text-black" : ""}
+                    ${isAtTop ? isWhiteBG ? "bg-transparent text-black" : "bg-transparent text-white" : isScrollingUp ? "bg-white bg-opacity-80 text-black" : ""}
                     ${showHeader || isOpen ? "translate-y-0 opacity-100 pointer-events-auto" : "-translate-y-full opacity-0 pointer-events-none"}
                 `}
             >
                 <div className={`
                     flex md:h-14 justify-end md:py-4 md:px-12 w-[90%] md:border-b
-                    ${isAtTop ? "md:border-black lg:border-white" : isScrollingUp ? "md:border-black lg:border-black" : ""}
+                    ${isAtTop ? isWhiteBG ? "md:border-black ":"md:border-white" : isScrollingUp ? "md:border-black" : ""}
                 `}>
                     <nav className="hidden md:flex gap-6 md:gap-10 lg:gap-16 xl:gap-20">
                         {navLinks.map(({ label, href }, i) => (
