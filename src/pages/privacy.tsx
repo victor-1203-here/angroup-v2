@@ -6,7 +6,7 @@ export default function PrivacyStatement() {
       <p className="mb-6">
         An Group (“we”, “us”, or “our”) is committed to protecting your privacy. This Privacy Statement
         explains how we collect, use, disclose, and safeguard your information when you visit our
-        website [insert website URL], interact with our services, or communicate with us.
+        website <a href="http://www.angroup.my" className="text-[#38947e] hover:underline">http://www.angroup.my</a>, interact with our services, or communicate with us.
       </p>
 
       <h2 className="text-xl font-semibold mb-3">1. Information We Collect</h2>
@@ -64,8 +64,8 @@ export default function PrivacyStatement() {
       <h2 className="text-xl font-semibold mb-3">9. Contact Us</h2>
       <address className="not-italic mb-6">
         An Group<br />
-        Email: <a href="mailto:enquiry@angroup.my" className="text-blue-600 hover:underline">enquiry@angroup.my</a><br />
-        Phone: <a href="tel:+6045386820" className="text-blue-600 hover:underline">+604 538 6820</a><br />
+        Email: <a href="mailto:enquiry@angroup.my" className="text-[#38947e] hover:underline">enquiry@angroup.my</a><br />
+        Phone: <a href="tel:+6045386820" className="text-[#38947e] hover:underline">+604 538 6820</a><br />
         Address: No.1383, MK 15, Jalan Megat Harun, Alma, 14000 Bukit Mertajam, Penang, Malaysia.
       </address>
     </section>

@@ -48,7 +48,7 @@ export default function TermsAndConditions() {
 
       <h2 className="text-xl font-semibold mb-3">8. Governing Law</h2>
       <p className="mb-6">
-        These Terms are governed by the laws of [Malaysia or relevant country]. Any disputes shall be resolved in the courts of [relevant city/state].
+        These Terms are governed by the laws of Malaysia. Any disputes shall be resolved in the courts of Kuala Lumpur, Malaysia.
       </p>
     </section>
   );

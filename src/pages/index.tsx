@@ -78,7 +78,12 @@ const highlights = [
   },
   {
     title: "Committed to Energy Transition",
-    description: null,
+    description: (
+      <>
+        As the global energy landscape shifts toward sustainability, An Group is committed to adapting responsibly. We are actively reinforcing our operations to align with evolving environmental goals, exploring avenues in renewable energy, reducing emissions, and investing in cleaner, more efficient solutions for long-term impact.
+
+      </>
+    ),
     imageSrc: "/images/home/photo_016.jpg",
   },
 ];
