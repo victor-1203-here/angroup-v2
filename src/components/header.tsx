@@ -66,7 +66,7 @@ export default function Header() {
             <div
                 className={`md:h-26 pointer-events-none fixed left-4 top-2 z-[100] transition-opacity transition-transform duration-300 ease-in-out md:top-4 md:px-10 md:px-4 md:py-3 md:py-4 ${showHeader || isOpen ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-full opacity-0'} `}
             >
-                <Image src="/images/icon/icon-dark.png" alt="Logo" width={64} height={64} priority />
+                <Image src="/images/icon/icon.png" alt="Logo" width={64} height={64} priority />
             </div>
             <header
                 className={`fixed left-0 top-0 z-50 flex min-w-full justify-end px-2 py-6 transition-opacity transition-transform duration-300 ease-in-out md:h-24 md:px-12 md:py-4 ${isAtTop ? (isWhiteBG ? 'bg-transparent text-black' : 'bg-transparent text-white') : isScrollingUp ? 'bg-white bg-opacity-80 text-black' : ''} ${showHeader || isOpen ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-full opacity-0'} `}
