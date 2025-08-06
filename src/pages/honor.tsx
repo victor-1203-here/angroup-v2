@@ -169,7 +169,7 @@ export default function Honor() {
 
                         <div className="relative">
                             {activeTab === 'licenses' && <div className="absolute inset-0 rounded-3xl bg-white/70"></div>}
-                            <div className="relative z-10 py-6 px-6 md:px-0">
+                            <div className="relative z-10 px-6 py-6 md:px-0">
                                 {activeTab === 'honors' && (
                                     <>
                                         <div className="hidden overflow-x-auto md:block">
@@ -215,7 +215,7 @@ export default function Honor() {
 
                                 {activeTab === 'licenses' && (
                                     <div className="mx-auto max-w-2xl">
-                                        <p className='mb-4 md:mb-6'>
+                                        <p className="mb-4 md:mb-6">
                                             We are a fully licensed and authorized operator under the Petroleum Development Act (PDA), ensuring that
                                             our business operates in full compliance with industry regulations and national standards. Our licenses,
                                             issued and approved by the Ministry of Domestic Trade and Cost of Living (Kementerian Perdagangan Dalam
@@ -236,11 +236,7 @@ export default function Honor() {
                                             {licenses.map((item, idx) => (
                                                 <SwiperSlide key={idx}>
                                                     <div className="flex flex-col items-center">
-                                                        <img
-                                                            src={item.img}
-                                                            alt='licences'
-                                                            className="mb-2 max-h-96 w-full rounded object-contain"
-                                                        />
+                                                        <img src={item.img} alt="licences" className="mb-2 max-h-96 w-full rounded object-contain" />
                                                     </div>
                                                 </SwiperSlide>
                                             ))}
@@ -250,7 +246,7 @@ export default function Honor() {
                             </div>
                         </div>
                     </div>
-                    <div className="hidden md:block flex min-h-[300px] w-full items-center justify-center md:my-8 md:min-h-[500px] md:w-1/2 md:py-20">
+                    <div className="flex hidden min-h-[300px] w-full items-center justify-center md:my-8 md:block md:min-h-[500px] md:w-1/2 md:py-20">
                         <img
                             src="/images/honor/map.png"
                             alt="World Map"

@@ -1,7 +1,8 @@
-import Head from "next/head";
 import { useEffect } from 'react';
+import CookieConsent from 'react-cookie-consent';
 import { DefaultSeo } from 'next-seo';
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import { usePathname } from 'next/navigation';
 import NextNProgress from 'nextjs-progressbar';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -10,8 +11,6 @@ import { cn } from '@/configs/cn';
 import PageTransition from '@/layouts/PageTransition';
 import { gillSans } from '@/lib/fonts';
 import '@/styles/globals.css';
-import CookieConsent from "react-cookie-consent";
-
 import Footer from '../components/footer';
 import Header from '../components/header';
 
@@ -70,29 +69,29 @@ export default function App({ Component, pageProps }: AppProps) {
                         location="bottom"
                         buttonText="Accept All"
                         cookieName="siteCookieConsent"
-                        style={{ background: "#2B373B" }}
+                        style={{ background: '#2B373B' }}
                         buttonStyle={{
-                            color: "#fff",
-                            background: "linear-gradient(180deg, #102a00, #00cca5)",
-                            fontSize: "13px",
-                            padding: "8px 24px",
-                            borderRadius: "5px",
-                            border: "none",
-                            minWidth: "120px"
+                            color: '#fff',
+                            background: 'linear-gradient(180deg, #102a00, #00cca5)',
+                            fontSize: '13px',
+                            padding: '8px 24px',
+                            borderRadius: '5px',
+                            border: 'none',
+                            minWidth: '120px',
                         }}
                         declineButtonStyle={{
-                            color: "#fff",
-                            background: "linear-gradient(180deg, #892520, #c0392b)",
-                            fontSize: "13px",
-                            padding: "8px 24px",
-                            borderRadius: "5px",
-                            border: "none",
-                            minWidth: "120px"
+                            color: '#fff',
+                            background: 'linear-gradient(180deg, #892520, #c0392b)',
+                            fontSize: '13px',
+                            padding: '8px 24px',
+                            borderRadius: '5px',
+                            border: 'none',
+                            minWidth: '120px',
                         }}
                         enableDeclineButton
                         declineButtonText="Decline"
                     >
-                        This website uses cookies to enhance your experience.{" "}
+                        This website uses cookies to enhance your experience.{' '}
                     </CookieConsent>
                 </div>
             </ReactLenis>
