@@ -2,7 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 
 const honorsData = [
     {
@@ -169,7 +173,7 @@ export default function Honor() {
 
                         <div className="relative">
                             {activeTab === 'licenses' && <div className="absolute inset-0 rounded-3xl bg-white/70"></div>}
-                            <div className="relative z-10 px-6 py-6 md:px-0">
+                            <div className={`relative z-10 px-6 py-6 md:px-0 ${activeTab === 'licenses' ? 'md:mt-16' : ''}`}>
                                 {activeTab === 'honors' && (
                                     <>
                                         <div className="hidden overflow-x-auto md:block">
@@ -223,6 +227,9 @@ export default function Honor() {
                                             levels of safety, efficiency, and service quality.
                                         </p>
                                         <Swiper
+                                            modules={[Pagination]}
+                                            // modules={[Pagination, Navigation]}
+                                            // navigation={true}
                                             spaceBetween={16}
                                             slidesPerView={1}
                                             pagination={{ clickable: true }}
@@ -235,8 +242,12 @@ export default function Honor() {
                                         >
                                             {licenses.map((item, idx) => (
                                                 <SwiperSlide key={idx}>
-                                                    <div className="flex flex-col items-center">
-                                                        <img src={item.img} alt="licences" className="mb-2 max-h-96 w-full rounded object-contain" />
+                                                    <div className="flex flex-col items-center pb-8">
+                                                        <img
+                                                            src={item.img}
+                                                            alt="licenses"
+                                                            className="mb-2 max-h-[500px] w-full rounded object-contain"
+                                                        />
                                                     </div>
                                                 </SwiperSlide>
                                             ))}

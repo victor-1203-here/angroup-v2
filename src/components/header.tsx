@@ -66,15 +66,15 @@ export default function Header() {
             <div
                 className={`md:h-26 pointer-events-none fixed left-4 top-2 z-[100] transition-opacity transition-transform duration-300 ease-in-out md:top-4 md:px-10 md:px-4 md:py-3 md:py-4 ${showHeader || isOpen ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-full opacity-0'} `}
             >
-                <Image src="/images/icon/icon.png" alt="Logo" width={64} height={64} priority />
+                <Image src="/images/icon/icon.png" alt="Logo" width={64} height={64} className="my-2 h-16 w-16 md:my-0 md:h-32 md:w-32" priority />
             </div>
             <header
-                className={`fixed left-0 top-0 z-50 flex min-w-full justify-end px-2 py-6 transition-opacity transition-transform duration-300 ease-in-out md:h-24 md:px-12 md:py-4 ${isAtTop ? (isWhiteBG ? 'bg-transparent text-black' : 'bg-transparent text-white') : isScrollingUp ? 'bg-white bg-opacity-80 text-black' : ''} ${showHeader || isOpen ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-full opacity-0'} `}
+                className={`fixed left-0 top-0 z-50 flex min-w-full justify-end px-2 py-8 transition-opacity transition-transform duration-300 ease-in-out md:h-48 md:px-12 md:py-4 ${isAtTop ? (isWhiteBG ? 'bg-transparent text-black' : 'bg-transparent text-white') : isScrollingUp ? 'bg-white bg-opacity-80 text-black' : ''} ${showHeader || isOpen ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-full opacity-0'} `}
             >
                 <div
-                    className={`flex w-[90%] justify-end md:h-14 md:border-b md:px-12 md:py-4 ${isAtTop ? (isWhiteBG ? 'md:border-black' : 'md:border-white') : isScrollingUp ? 'md:border-black' : ''} `}
+                    className={`flex w-[90%] justify-end md:h-16 md:border-b md:px-12 md:py-4 ${isAtTop ? (isWhiteBG ? 'md:border-black' : 'md:border-white') : isScrollingUp ? 'md:border-black' : ''} `}
                 >
-                    <nav className="hidden gap-6 md:flex md:gap-10 lg:gap-16 xl:gap-20">
+                    <nav className="hidden gap-6 md:flex md:gap-10 lg:gap-16 xl:gap-20 md:pt-4">
                         {navLinks.map(({ label, href }, i) => (
                             <a key={i} href={href} className="transition-colors duration-200 hover:text-[#38947e]">
                                 {label}
@@ -82,8 +82,8 @@ export default function Header() {
                         ))}
                     </nav>
 
-                    <div className="flex items-center space-x-4 md:pl-20 lg:pl-20">
-                        <button
+                    <div className="flex items-center space-x-4 md:pl-20 px-4 md:px-0">
+                        {/* <button
                             type="button"
                             aria-label="Open search"
                             className="transition-colors duration-200 hover:text-[#38947e] focus:outline-none"
@@ -96,7 +96,7 @@ export default function Header() {
                             className="transition-colors duration-200 hover:text-[#38947e] focus:outline-none"
                         >
                             <BsGlobe2 size={20} />
-                        </button>
+                        </button> */}
                         <button type="button" className={`focus:outline-none md:hidden`} onClick={() => setIsOpen(!isOpen)} aria-label="Open Menu">
                             <HiBars3BottomRight size={24} />
                         </button>

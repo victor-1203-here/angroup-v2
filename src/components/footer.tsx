@@ -119,9 +119,7 @@ const Footer = () => {
                     {/* Copyright */}
                     <div className="mt-4 flex items-end md:mt-0">
                         <span className="text-xs text-gray-500">
-                            Copyright © 2025 An Group
-                            <br className="block md:hidden" />
-                            All rights reserved.
+                            Copyright © 2025 An Group. <br className="block md:hidden" /> All rights reserved.
                         </span>
                     </div>
                 </div>

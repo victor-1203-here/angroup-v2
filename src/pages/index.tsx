@@ -147,7 +147,7 @@ export default function MySwiper() {
 
     return (
         <>
-            <section className="relative h-screen w-full" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+            <section className="relative h-screen w-full">
                 <Swiper
                     modules={[Autoplay]}
                     autoplay={{ delay: AUTOPLAY_TIME, disableOnInteraction: false }}
@@ -170,7 +170,6 @@ export default function MySwiper() {
                                         </svg>
                                     </a>
                                 </div>
-                                {/* Mobile overlay text */}
                                 <div className="absolute left-0 top-0 flex h-full max-w-[85vw] flex-col justify-center p-6 [text-shadow:0_4px_10px_rgba(0,0,0,0.8)] md:hidden">
                                     <h2 className="mb-2 text-2xl font-bold text-white">{slide.title}</h2>
                                     <p className="mb-4 text-white">{slide.description}</p>
@@ -211,15 +210,18 @@ export default function MySwiper() {
                 </Swiper>
 
                 <div className="max-w-9xl absolute bottom-8 left-1/2 z-10 hidden w-full -translate-x-1/2 md:flex">
-                    <div className="flex w-full justify-center gap-32 overflow-x-auto whitespace-nowrap">
+                    <div
+                        className="flex w-full justify-center gap-32 overflow-x-auto whitespace-nowrap"
+                        onMouseEnter={onMouseEnter}
+                        onMouseLeave={onMouseLeave}
+                    >
                         {slides.map((slide, i) => {
                             const isActive = activeIdx === i;
                             return (
                                 <button
                                     key={slide.title}
                                     type="button"
-                                    className="group relative whitespace-nowrap px-1 py-2 text-center font-medium focus:outline-none"
-                                    style={{ fontSize: '1.08rem', lineHeight: 1.2, minWidth: 0, maxWidth: '240px' }}
+                                    className="group relative min-w-0 max-w-[240px] whitespace-nowrap px-1 py-2 text-center text-[1.08rem] font-medium leading-[1.2] focus:outline-none"
                                     aria-current={isActive}
                                     onClick={() => {
                                         swiperRef.current?.slideToLoop(i);
@@ -329,15 +331,9 @@ export default function MySwiper() {
                         </div>
                     </div>
                 </div>
-
-                {/* Mission card */}
                 <div className="mb-10 overflow-hidden rounded-[2.5rem] shadow-lg">
                     <div className="relative">
-                        <img
-                            src="/images/home/photo_010.jpg" // replace with your image
-                            alt="Mission"
-                            className="h-56 w-full object-cover"
-                        />
+                        <img src="/images/home/photo_010.jpg" alt="Mission" className="h-56 w-full object-cover" />
                         <div className="absolute inset-0 bg-black opacity-50"></div>
                         <div className="absolute inset-0 flex flex-row items-center justify-center gap-10 p-8 md:mx-12 md:justify-between md:px-12">
                             <h3 className="text-3xl font-semibold text-white md:text-5xl">Mission</h3>
@@ -347,15 +343,9 @@ export default function MySwiper() {
                         </div>
                     </div>
                 </div>
-
-                {/* Values card */}
                 <div className="overflow-hidden rounded-[2.5rem] shadow-lg">
                     <div className="relative">
-                        <img
-                            src="/images/home/photo_011.jpg" // replace with your image
-                            alt="Values"
-                            className="h-56 w-full object-cover"
-                        />
+                        <img src="/images/home/photo_011.jpg" alt="Values" className="h-56 w-full object-cover" />
                         <div className="absolute inset-0 bg-black opacity-50"></div>
                         <div className="absolute inset-0 flex flex-row items-center justify-center gap-10 p-8 md:mx-12 md:justify-between md:px-12">
                             <h3 className="text-3xl font-semibold text-white md:text-5xl">Values</h3>
@@ -372,7 +362,6 @@ export default function MySwiper() {
                 <p className="mb-8 text-lg text-gray-700">Reliable Supply, Global Reach</p>
 
                 <div className="flex flex-col items-start gap-8 md:flex-row">
-                    {/* Main image panel - left on desktop, top on mobile */}
                     <div className="w-full flex-shrink-0 md:w-1/2 lg:w-[38%]">
                         <div className="h-72 overflow-hidden rounded-3xl shadow-lg md:h-[32rem]">
                             <div className="relative h-full">
@@ -380,34 +369,39 @@ export default function MySwiper() {
                             </div>
                         </div>
                     </div>
+                    <div className="w-full flex-1 md:min-h-[650px]">
+                        {highlights.map((item, idx) => {
+                            const isExpanded = expanded === idx;
 
-                    {/* Accordion list - below image on mobile, right on desktop */}
-                    <div className="w-full flex-1">
-                        {highlights.map((item, idx) => (
-                            <div key={item.title} className="mb-8">
-                                <button
-                                    type="button"
-                                    className="flex w-full items-center justify-between rounded-lg px-2 py-2 text-left text-2xl hover:bg-gray-50 focus:outline-none"
-                                    onClick={() => setExpanded(expanded === idx ? -1 : idx)}
-                                    aria-expanded={expanded === idx}
-                                    aria-label="Tab Opener"
-                                    aria-controls={`section-content-${idx}`}
-                                >
-                                    <span className={`${expanded === idx ? 'text-[#38947e]' : ''}`}>{item.title}</span>
-                                    {expanded === idx ? (
-                                        <FaMinusCircle className="text-xl text-[#38947e]" />
-                                    ) : (
-                                        <FaPlusCircle className="text-xl text-[#38947e]" />
-                                    )}
-                                </button>
-                                {/* Expanded Content */}
-                                {expanded === idx && item.description && (
-                                    <div id={`section-content-${idx}`} className="px-2 pb-4 text-base text-gray-800">
+                            return (
+                                <div key={item.title} className="mb-8">
+                                    <button
+                                        type="button"
+                                        className="flex w-full items-center justify-between rounded-lg px-2 py-2 text-left text-2xl hover:bg-gray-50 focus:outline-none"
+                                        onClick={() => setExpanded(isExpanded ? -1 : idx)}
+                                        aria-expanded={isExpanded}
+                                        aria-label="Tab Opener"
+                                        aria-controls={`section-content-${idx}`}
+                                    >
+                                        <span className={isExpanded ? 'text-[#38947e]' : ''}>{item.title}</span>
+                                        {isExpanded ? (
+                                            <FaMinusCircle className="text-xl text-[#38947e] transition-transform duration-300" />
+                                        ) : (
+                                            <FaPlusCircle className="text-xl text-[#38947e] transition-transform duration-300" />
+                                        )}
+                                    </button>
+                                    <div
+                                        id={`section-content-${idx}`}
+                                        className={`overflow-hidden px-2 pb-4 text-base text-gray-800 transition-[max-height,opacity,margin] duration-300 ease-in-out ${
+                                            isExpanded ? 'mt-2 max-h-[1000px] opacity-100' : 'mt-0 max-h-0 opacity-0'
+                                        }`}
+                                        aria-hidden={!isExpanded}
+                                    >
                                         <div className="mb-2">{item.description}</div>
                                     </div>
-                                )}
-                            </div>
-                        ))}
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
