@@ -81,7 +81,7 @@ export default function Contact() {
                             <div className="mt-2 flex items-center gap-2">
                                 <input type="checkbox" id="rcaptcha" required className="accent-[#00cca5]" />
                                 <label htmlFor="rcaptcha" className="text-xs text-gray-600">
-                                    I'm not a robot{' '}
+                                    I&apos;m not a robot{' '}
                                     <span className="ml-1 inline-block rounded border border-gray-200 bg-gray-100 px-2 py-1 align-bottom text-[10px]">
                                         reCAPTCHA
                                     </span>

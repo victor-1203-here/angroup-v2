@@ -66,7 +66,7 @@ export default function About() {
                             </p>
                             <p className="text-base text-white sm:text-xl md:text-xl md:leading-10">
                                 With strategic logistics bases in Penang, Port Klang, Bukit Kayu Hitam, and Johor, we are able to guarantee wide
-                                coverage and prompt delivery to meet our customers' needs.
+                                coverage and prompt delivery to meet our customers&apos; needs.
                             </p>
                         </div>
                     </div>

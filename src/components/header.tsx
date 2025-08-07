@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { BsGlobe2, BsSearch } from 'react-icons/bs';
+// import { BsGlobe2, BsSearch } from 'react-icons/bs';
 import { HiBars3BottomRight } from 'react-icons/hi2';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -82,7 +82,7 @@ export default function Header() {
                         ))}
                     </nav>
 
-                    <div className="flex items-center space-x-4 md:pl-20 px-4 md:px-0">
+                    <div className="flex items-center space-x-4 md:pl-20 md:px-0">
                         {/* <button
                             type="button"
                             aria-label="Open search"

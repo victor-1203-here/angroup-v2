@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { FaArrowLeft, FaArrowRight, FaMinusCircle, FaPlusCircle } from 'react-icons/fa';
+import Image from 'next/image';
+import Link from 'next/link';
 import { Swiper as SwiperClass } from 'swiper';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
@@ -105,6 +107,7 @@ export default function MySwiper() {
     const [progress, setProgress] = useState(0);
     const [isHover, setIsHover] = useState(false);
     const [expanded, setExpanded] = useState(0);
+
     const displayImage = expanded >= 0 ? highlights[expanded].imageSrc : highlights[0].imageSrc;
     const displayTitle = expanded >= 0 ? highlights[expanded].title : highlights[0].title;
 
@@ -158,27 +161,29 @@ export default function MySwiper() {
                     {slides.map((slide, idx) => (
                         <SwiperSlide key={idx}>
                             <div className="relative h-screen w-full">
-                                <img src={slide.image} alt={slide.title} className="h-screen w-full object-cover" />
+                                {/* Replaced <img> with next/image */}
+                                <Image src={slide.image} alt={slide.title} fill className="object-cover" priority />
                                 <div className="absolute inset-0 bg-black bg-opacity-20" />
                                 <div className="absolute left-0 top-0 hidden h-full max-w-[35vw] flex-col justify-center p-12 [text-shadow:0_4px_10px_rgba(0,0,0,0.8)] md:ml-8 md:flex">
                                     <h2 className="mb-4 text-4xl font-bold text-white">{slide.title}</h2>
                                     <p className="mb-6 text-lg text-white">{slide.description}</p>
-                                    <a href={slide.link} className="mb-8 flex items-center gap-2 font-semibold text-white underline">
+                                    {/* Internal link: replaced <a> with Link */}
+                                    <Link href={slide.link} className="mb-8 flex items-center gap-2 font-semibold text-white underline">
                                         <span>Read More</span>
                                         <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                             <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="absolute left-0 top-0 flex h-full max-w-[85vw] flex-col justify-center p-6 [text-shadow:0_4px_10px_rgba(0,0,0,0.8)] md:hidden">
                                     <h2 className="mb-2 text-2xl font-bold text-white">{slide.title}</h2>
                                     <p className="mb-4 text-white">{slide.description}</p>
-                                    <a href={slide.link} className="mb-16 flex items-center gap-2 font-semibold text-white underline">
+                                    <Link href={slide.link} className="mb-16 flex items-center gap-2 font-semibold text-white underline">
                                         <span>Read More</span>
                                         <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                             <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="absolute bottom-6 left-6 mb-8 flex w-[calc(100%-3rem)] items-center justify-between text-white md:hidden">
                                     <span className="ml-4 font-medium">{slide.title}</span>
@@ -264,7 +269,8 @@ export default function MySwiper() {
                             focus on sustainability and excellence.
                         </p>
                     </div>
-                    <a
+                    {/* Internal navigation: replaced <a> with Link */}
+                    <Link
                         href="/honor"
                         className="flex items-center gap-2 self-start rounded-xl bg-gradient-to-b from-[#102a00] to-[#00cca5] px-6 py-2 font-semibold text-white shadow-lg md:self-center"
                     >
@@ -272,38 +278,47 @@ export default function MySwiper() {
                             <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                         View all
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="flex flex-col gap-6 md:flex-row">
-                    <div className="group relative flex-1 overflow-hidden rounded-2xl bg-white shadow-lg transition-transform duration-200 hover:scale-[1.02]">
-                        <img src="/images/home/photo_006.jpg" alt="Strengthening the Core" className="h-96 w-full object-cover md:h-96" />
-                        <div className="pointer-events-none absolute bottom-0 left-0 w-full rounded-2xl bg-gradient-to-t from-[#102a00]/90 to-[#00cca5] px-16 py-6 text-center opacity-90 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
-                            <h3 className="pb-2 text-lg font-semibold text-white">Strengthening the Core</h3>
-                            <p className="text-sm text-white">
-                                Enhancing operations with greater safety and efficiency while lowering emissions to build a solid, future-ready
-                                foundation.
-                            </p>
+                    {[
+                        {
+                            src: '/images/home/photo_006.jpg',
+                            alt: 'Strengthening the Core',
+                            title: 'Strengthening the Core',
+                            desc: 'Enhancing operations with greater safety and efficiency while lowering emissions to build a solid, future-ready foundation.',
+                        },
+                        {
+                            src: '/images/home/photo_007.jpg',
+                            alt: 'Capturing New Growth',
+                            title: 'Capturing New Growth',
+                            desc: 'Expanding into renewables, specialty chemicals, hydrogen, and carbon solutions to meet evolving energy needs.',
+                        },
+                        {
+                            src: '/images/home/photo_008.jpg',
+                            alt: 'Achieving Net Zero',
+                            title: 'Achieving Net Zero',
+                            desc: 'Committed to a carbon-neutral future by 2050, with ongoing efforts to reduce emissions across all operations.',
+                        },
+                    ].map(({ src, alt, title, desc }, idx) => (
+                        <div
+                            key={idx}
+                            className="group relative flex-1 overflow-hidden rounded-2xl bg-white shadow-lg transition-transform duration-200 hover:scale-[1.02]"
+                        >
+                            <Image
+                                src={src}
+                                alt={alt}
+                                width={600} // Approximate width
+                                height={384} // Approximate height, same as h-96
+                                className="w-full object-cover md:h-96"
+                            />
+                            <div className="pointer-events-none absolute bottom-0 left-0 w-full rounded-2xl bg-gradient-to-t from-[#102a00]/90 to-[#00cca5] px-16 py-6 text-center opacity-90 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
+                                <h3 className="pb-2 text-lg font-semibold text-white">{title}</h3>
+                                <p className="text-sm text-white">{desc}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="group relative flex-1 overflow-hidden rounded-2xl bg-white shadow-lg transition-transform duration-200 hover:scale-[1.02]">
-                        <img src="/images/home/photo_007.jpg" alt="Capturing New Growth" className="h-96 w-full object-cover md:h-96" />
-                        <div className="pointer-events-none absolute bottom-0 left-0 w-full rounded-2xl bg-gradient-to-t from-[#102a00]/90 to-[#00cca5] px-16 py-6 text-center opacity-90 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
-                            <h3 className="pb-2 text-lg font-semibold text-white">Capturing New Growth</h3>
-                            <p className="text-sm text-white">
-                                Expanding into renewables, specialty chemicals, hydrogen, and carbon solutions to meet evolving energy needs.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="group relative flex-1 overflow-hidden rounded-2xl bg-white shadow-lg transition-transform duration-200 hover:scale-[1.02]">
-                        <img src="/images/home/photo_008.jpg" alt="Achieving Net Zero" className="h-96 w-full object-cover md:h-96" />
-                        <div className="pointer-events-none absolute bottom-0 left-0 w-full rounded-2xl bg-gradient-to-t from-[#102a00]/90 to-[#00cca5] px-16 py-6 text-center opacity-90 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
-                            <h3 className="pb-2 text-lg font-semibold text-white">Achieving Net Zero</h3>
-                            <p className="text-sm text-white">
-                                Committed to a carbon-neutral future by 2050, with ongoing efforts to reduce emissions across all operations.
-                            </p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </section>
 
@@ -320,9 +335,15 @@ export default function MySwiper() {
 
                 <div className="mb-10 overflow-hidden rounded-[2.5rem] shadow-lg">
                     <div className="relative">
-                        <img src="/images/home/photo_009.jpg" alt="Vision" className="h-56 w-full object-cover" />
+                        <Image
+                            src="/images/home/photo_009.jpg"
+                            alt="Vision"
+                            width={1920} // full width approx
+                            height={224} // scaled height for h-56 (14rem * 16 = 224px)
+                            className="h-56 w-full object-cover"
+                        />
                         <div className="absolute inset-0 bg-black opacity-50"></div>
-                        <div className="absolute inset-0 flex flex-row items-center justify-center gap-10 p-8 md:mx-12 md:justify-between md:px-12">
+                        <div className="absolute inset-0 flex flex-row items-center justify-between gap-10 p-8 md:mx-12">
                             <h3 className="text-3xl font-semibold text-white md:text-5xl">Vision</h3>
                             <p className="max-w-xs text-white md:text-lg">
                                 To lead as East Asia’s top petroleum provider, growing worldwide while delivering quality, building lasting
@@ -333,9 +354,9 @@ export default function MySwiper() {
                 </div>
                 <div className="mb-10 overflow-hidden rounded-[2.5rem] shadow-lg">
                     <div className="relative">
-                        <img src="/images/home/photo_010.jpg" alt="Mission" className="h-56 w-full object-cover" />
+                        <Image src="/images/home/photo_010.jpg" alt="Mission" width={1920} height={224} className="h-56 w-full object-cover" />
                         <div className="absolute inset-0 bg-black opacity-50"></div>
-                        <div className="absolute inset-0 flex flex-row items-center justify-center gap-10 p-8 md:mx-12 md:justify-between md:px-12">
+                        <div className="absolute inset-0 flex flex-row items-center justify-between gap-10 p-8 md:mx-12">
                             <h3 className="text-3xl font-semibold text-white md:text-5xl">Mission</h3>
                             <p className="max-w-xs text-white md:text-lg">
                                 To bridge energy needs with eco-efficient solutions through innovation, education, and sustainable practices.
@@ -345,9 +366,9 @@ export default function MySwiper() {
                 </div>
                 <div className="overflow-hidden rounded-[2.5rem] shadow-lg">
                     <div className="relative">
-                        <img src="/images/home/photo_011.jpg" alt="Values" className="h-56 w-full object-cover" />
+                        <Image src="/images/home/photo_011.jpg" alt="Values" width={1920} height={224} className="h-56 w-full object-cover" />
                         <div className="absolute inset-0 bg-black opacity-50"></div>
-                        <div className="absolute inset-0 flex flex-row items-center justify-center gap-10 p-8 md:mx-12 md:justify-between md:px-12">
+                        <div className="absolute inset-0 flex flex-row items-center justify-between gap-10 p-8 md:mx-12">
                             <h3 className="text-3xl font-semibold text-white md:text-5xl">Values</h3>
                             <p className="max-w-xs text-white md:text-lg">
                                 We deliver excellence through safe operations, sustainable energy solutions, and trustworthy support.
@@ -365,7 +386,7 @@ export default function MySwiper() {
                     <div className="w-full flex-shrink-0 md:w-1/2 lg:w-[38%]">
                         <div className="h-72 overflow-hidden rounded-3xl shadow-lg md:h-[32rem]">
                             <div className="relative h-full">
-                                <img src={displayImage} alt={displayTitle} className="h-full w-full object-cover" />
+                                <Image src={displayImage} alt={displayTitle} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                             </div>
                         </div>
                     </div>

@@ -42,10 +42,12 @@ export default function Services() {
 
                     <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-x-[9rem] md:gap-y-20">
                         <div>
-                            <img
+                            <Image
                                 src="/images/service/service_001.jpg"
                                 alt="Energy Solutions"
-                                className="h-52 w-full rounded-2xl object-cover object-center md:h-96"
+                                width={600} 
+                                height={208} 
+                                className="rounded-2xl object-cover object-center md:h-96 md:w-full"
                             />
                             <div className="mt-4 md:mt-6">
                                 <h3 className="mb-2 text-xl text-[#38947e]">1. Our Energy Solutions</h3>
@@ -57,10 +59,12 @@ export default function Services() {
                             </div>
                         </div>
                         <div>
-                            <img
+                            <Image
                                 src="/images/service/service_002.jpg"
                                 alt="What We Deliver"
-                                className="h-52 w-full rounded-2xl object-cover object-center md:h-96"
+                                width={600}
+                                height={208}
+                                className="rounded-2xl object-cover object-center md:h-96 md:w-full"
                             />
                             <div className="mt-4 md:mt-6">
                                 <h3 className="mb-2 text-xl text-[#38947e]">2. What We Deliver</h3>
@@ -73,10 +77,12 @@ export default function Services() {
                             </div>
                         </div>
                         <div>
-                            <img
+                            <Image
                                 src="/images/service/service_003.jpg"
                                 alt="Powering Your Operations"
-                                className="h-52 w-full rounded-2xl object-cover object-center md:h-96"
+                                width={600}
+                                height={208}
+                                className="rounded-2xl object-cover object-center md:h-96 md:w-full"
                             />
                             <div className="mt-4 md:mt-6">
                                 <h3 className="mb-2 text-xl text-[#38947e]">3. Powering Your Operations</h3>
@@ -88,25 +94,29 @@ export default function Services() {
                             </div>
                         </div>
                         <div>
-                            <img
+                            <Image
                                 src="/images/service/service_004.jpg"
                                 alt="Reliable Supply"
-                                className="h-52 w-full rounded-2xl object-cover object-center md:h-96"
+                                width={600}
+                                height={208}
+                                className="rounded-2xl object-cover object-center md:h-96 md:w-full"
                             />
                             <div className="mt-4 md:mt-6">
                                 <h3 className="mb-2 text-xl text-[#38947e]">4. Reliable Supply. Every Time.</h3>
                                 <p className="text-lg text-gray-700">
-                                    At An Group, reliability is more than a promise — it’s our standard. With over 5 million litres of storage
+                                    At An Group, reliability is more than a promise — it&apos;s our standard. With over 5 million litres of storage
                                     capacity and extensive distribution coverage, we ensure uninterrupted delivery even during high-demand periods.
                                     Our proactive maintenance routines and experienced drivers uphold safety and consistency in every delivery.
                                 </p>
                             </div>
                         </div>
                         <div>
-                            <img
+                            <Image
                                 src="/images/service/service_005.jpg"
                                 alt="Powering Your Operations"
-                                className="h-52 w-full rounded-2xl object-cover object-center md:h-96"
+                                width={600}
+                                height={208}
+                                className="rounded-2xl object-cover object-center md:h-96 md:w-full"
                             />
                             <div className="mt-4 md:mt-6">
                                 <h3 className="mb-2 text-xl text-[#38947e]">5. Fuel. Chemicals. Logistics.</h3>
@@ -118,17 +128,19 @@ export default function Services() {
                             </div>
                         </div>
                         <div>
-                            <img
+                            <Image
                                 src="/images/service/service_006.jpg"
                                 alt="Reliable Supply"
-                                className="h-52 w-full rounded-2xl object-cover object-center md:h-96"
+                                width={600}
+                                height={208}
+                                className="rounded-2xl object-cover object-center md:h-96 md:w-full"
                             />
                             <div className="mt-4 md:mt-6">
                                 <h3 className="mb-2 text-xl text-[#38947e]">6. End-to-End Distribution Expertise</h3>
                                 <p className="text-lg text-gray-700">
                                     From sourcing to storage, delivery, and customer support — An Group provides seamless, end-to-end fuel and
                                     chemical distribution solutions. Our integrated approach ensures every stage of the supply chain is handled with
-                                    precision, speed, and compliance. Whether it’s large-scale industrial orders or tailored volume requests, we
+                                    precision, speed, and compliance. Whether it&apos;s large-scale industrial orders or tailored volume requests, we
                                     manage it all with professionalism and care, so you can focus on running your business.
                                 </p>
                             </div>

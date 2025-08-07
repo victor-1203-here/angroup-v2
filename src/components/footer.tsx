@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import Link from 'next/link';
+
+// <-- Import Link
 
 const COOKIE_CATEGORIES = [
     {
@@ -6,21 +9,7 @@ const COOKIE_CATEGORIES = [
         label: 'Necessary Cookies',
         description: 'Enable essential site functionality. These cannot be disabled.',
     },
-    // {
-    //   key: "functional",
-    //   label: "Functional Cookies",
-    //   description: "Remember your choices such as language or region.",
-    // },
-    // {
-    //   key: "analytics",
-    //   label: "Analytics Cookies",
-    //   description: "Help us understand how visitors interact with the site.",
-    // },
-    // {
-    //   key: "marketing",
-    //   label: "Marketing Cookies",
-    //   description: "Used to show relevant advertising on this or other sites.",
-    // },
+    // Add other categories here if needed
 ];
 
 const defaultPrefs = {
@@ -98,25 +87,21 @@ const Footer = () => {
                 <div className="flex h-28 flex-col justify-between md:h-24 md:flex-row">
                     <div className="flex justify-center md:justify-end">
                         <nav className="flex flex-row gap-6 text-xs font-medium text-gray-700">
-                            <a href="/terms" className="hover:underline">
+                            <Link href="/terms" className="hover:underline">
                                 Terms of Use
-                            </a>
-                            <a href="/privacy" className="hover:underline">
+                            </Link>
+                            <Link href="/privacy" className="hover:underline">
                                 Privacy Statement
-                            </a>
-                            <a
-                                href="#"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setShowCookieModal(true);
-                                }}
-                                className="cursor-pointer hover:underline"
+                            </Link>
+                            <button
+                                type="button"
+                                onClick={() => setShowCookieModal(true)}
+                                className="h-2 cursor-pointer border-0 bg-transparent p-0 text-left font-medium text-gray-700 hover:underline"
                             >
                                 Cookies Settings
-                            </a>
+                            </button>
                         </nav>
                     </div>
-                    {/* Copyright */}
                     <div className="mt-4 flex items-end md:mt-0">
                         <span className="text-xs text-gray-500">
                             Copyright © 2025 An Group. <br className="block md:hidden" /> All rights reserved.

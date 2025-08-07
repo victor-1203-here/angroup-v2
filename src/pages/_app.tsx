@@ -24,9 +24,6 @@ const queryClient = new QueryClient({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
-    const pathname = usePathname();
-
-    const isHomePage = pathname === '/';
 
     useEffect(() => {
         const initGSAP = async () => {

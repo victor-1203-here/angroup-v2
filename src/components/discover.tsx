@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import 'swiper/css';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,8 +14,14 @@ export default function Discover() {
 
                 <div className="relative hidden min-h-[370px] w-full items-center justify-between [background:linear-gradient(90deg,#00cca5_0%,#7fc995_100%)] md:flex md:min-h-[430px] md:p-2">
                     <div className="relative mx-2 flex-1 overflow-hidden rounded-[1.5rem]">
-                        <img src="/images/home/photo_017.jpg" alt="Our Story" className="h-96 w-full rounded-[1.5rem] object-cover" />
-                        <a
+                        <Image
+                            src="/images/home/photo_017.jpg"
+                            alt="Our Story"
+                            width={600}
+                            height={384}
+                            className="h-96 w-full rounded-[1.5rem] object-cover"
+                        />
+                        <Link
                             href="/about"
                             className="absolute right-4 top-4 z-10 flex items-center gap-2 rounded-full bg-gradient-to-b from-[#07dfb5] to-[#295b40] px-6 py-2 text-[1rem] font-semibold text-white shadow-lg transition hover:opacity-90"
                         >
@@ -21,7 +29,7 @@ export default function Discover() {
                                 <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                             View all
-                        </a>
+                        </Link>
 
                         <div className="absolute bottom-0 left-0 flex w-full items-end justify-center bg-gradient-to-t from-black/40 via-black/10 to-transparent py-3">
                             <span className="text-2xl font-semibold text-white drop-shadow">Our Story</span>
@@ -29,8 +37,14 @@ export default function Discover() {
                     </div>
 
                     <div className="relative mx-2 min-w-[300px] flex-1 overflow-hidden rounded-[1.5rem]">
-                        <img src="/images/home/photo_018.jpg" alt="Achievements & Awards" className="h-96 w-full rounded-[1.5rem] object-cover" />
-                        <a
+                        <Image
+                            src="/images/home/photo_018.jpg"
+                            alt="Achievements & Awards"
+                            width={600}
+                            height={384}
+                            className="h-96 w-full rounded-[1.5rem] object-cover"
+                        />
+                        <Link
                             href="/honor"
                             className="absolute right-4 top-4 z-10 flex items-center gap-2 rounded-full bg-gradient-to-b from-[#07dfb5] to-[#295b40] px-6 py-2 text-[1rem] font-semibold text-white shadow-lg transition hover:opacity-90"
                         >
@@ -38,15 +52,21 @@ export default function Discover() {
                                 <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                             View all
-                        </a>
+                        </Link>
                         <div className="absolute bottom-0 left-0 flex w-full items-end justify-center bg-gradient-to-t from-black/40 via-black/10 to-transparent py-3">
                             <span className="text-2xl font-semibold text-white drop-shadow">Achievements & Awards</span>
                         </div>
                     </div>
 
                     <div className="relative mx-2 min-w-[300px] flex-1 overflow-hidden rounded-[1.5rem]">
-                        <img src="/images/home/photo_019.jpg" alt="Inside An Group" className="h-96 w-full rounded-[1.5rem] object-cover" />
-                        <a
+                        <Image
+                            src="/images/home/photo_019.jpg"
+                            alt="Inside An Group"
+                            width={600}
+                            height={384}
+                            className="h-96 w-full rounded-[1.5rem] object-cover"
+                        />
+                        <Link
                             href="/services"
                             className="absolute right-4 top-4 z-10 flex items-center gap-2 rounded-full bg-gradient-to-b from-[#07dfb5] to-[#295b40] px-6 py-2 text-[1rem] font-semibold text-white shadow-lg transition hover:opacity-90"
                         >
@@ -54,7 +74,7 @@ export default function Discover() {
                                 <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                             View all
-                        </a>
+                        </Link>
                         <div className="absolute bottom-0 left-0 flex w-full items-end justify-center bg-gradient-to-t from-black/40 via-black/10 to-transparent py-3">
                             <span className="text-2xl font-semibold text-white drop-shadow">Inside An Group</span>
                         </div>
@@ -70,16 +90,22 @@ export default function Discover() {
                     <Swiper pagination={{ clickable: true }} modules={[Pagination]}>
                         <SwiperSlide>
                             <div className="relative">
-                                <img src="/images/service/service_001.jpg" alt="Our Story" className="h-64 w-full rounded-[1.5rem] object-cover" />
-                                <button
-                                    type="button"
+                                <Image
+                                    src="/images/service/service_001.jpg"
+                                    alt="Our Story"
+                                    width={600}
+                                    height={256}
+                                    className="h-64 w-full rounded-[1.5rem] object-cover"
+                                />
+                                <Link
+                                    href="/about"
                                     className="absolute right-4 top-3 z-10 flex items-center gap-2 rounded-full bg-gradient-to-b from-[#07dfb5] to-[#295b40] px-4 py-1.5 text-sm font-semibold text-white shadow"
                                 >
                                     <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                                         <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                     View all
-                                </button>
+                                </Link>
                                 <div className="absolute bottom-0 left-0 flex w-full items-end justify-center bg-gradient-to-t from-black/40 via-black/10 to-transparent py-3">
                                     <span className="text-xl font-semibold text-white drop-shadow">Our Story</span>
                                 </div>
@@ -87,20 +113,22 @@ export default function Discover() {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="relative">
-                                <img
+                                <Image
                                     src="/images/service/service_002.jpg"
                                     alt="Achievements & Awards"
+                                    width={600}
+                                    height={256}
                                     className="h-64 w-full rounded-[1.5rem] object-cover"
                                 />
-                                <button
-                                    type="button"
+                                <Link
+                                    href="/honor"
                                     className="absolute right-4 top-3 z-10 flex items-center gap-2 rounded-full bg-gradient-to-b from-[#07dfb5] to-[#295b40] px-4 py-1.5 text-sm font-semibold text-white shadow"
                                 >
                                     <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                                         <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                     View all
-                                </button>
+                                </Link>
                                 <div className="absolute bottom-0 left-0 flex w-full items-end justify-center bg-gradient-to-t from-black/40 via-black/10 to-transparent py-3">
                                     <span className="text-xl font-semibold text-white drop-shadow">Achievements & Awards</span>
                                 </div>
@@ -108,20 +136,22 @@ export default function Discover() {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="relative">
-                                <img
+                                <Image
                                     src="/images/service/service_003.jpg"
                                     alt="Inside An Group"
+                                    width={600}
+                                    height={256}
                                     className="h-64 w-full rounded-[1.5rem] object-cover"
                                 />
-                                <button
-                                    type="button"
+                                <Link
+                                    href="/services"
                                     className="absolute right-4 top-3 z-10 flex items-center gap-2 rounded-full bg-gradient-to-b from-[#07dfb5] to-[#295b40] px-4 py-1.5 text-sm font-semibold text-white shadow"
                                 >
                                     <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                                         <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                     View all
-                                </button>
+                                </Link>
                                 <div className="absolute bottom-0 left-0 flex w-full items-end justify-center bg-gradient-to-t from-black/40 via-black/10 to-transparent py-3">
                                     <span className="text-xl font-semibold text-white drop-shadow">Inside An Group</span>
                                 </div>

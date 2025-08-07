@@ -4,9 +4,8 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 
 const honorsData = [
     {
@@ -228,8 +227,6 @@ export default function Honor() {
                                         </p>
                                         <Swiper
                                             modules={[Pagination]}
-                                            // modules={[Pagination, Navigation]}
-                                            // navigation={true}
                                             spaceBetween={16}
                                             slidesPerView={1}
                                             pagination={{ clickable: true }}
@@ -243,9 +240,11 @@ export default function Honor() {
                                             {licenses.map((item, idx) => (
                                                 <SwiperSlide key={idx}>
                                                     <div className="flex flex-col items-center pb-8">
-                                                        <img
+                                                        <Image
                                                             src={item.img}
                                                             alt="licenses"
+                                                            width={400}
+                                                            height={300}
                                                             className="mb-2 max-h-[500px] w-full rounded object-contain"
                                                         />
                                                     </div>
@@ -258,9 +257,11 @@ export default function Honor() {
                         </div>
                     </div>
                     <div className="flex hidden min-h-[300px] w-full items-center justify-center md:my-8 md:block md:min-h-[500px] md:w-1/2 md:py-20">
-                        <img
+                        <Image
                             src="/images/honor/map.png"
                             alt="World Map"
+                            width={600}
+                            height={450}
                             className="h-full max-h-[400px] w-full max-w-full rounded-3xl object-contain md:max-h-[600px] md:object-cover"
                         />
                     </div>
