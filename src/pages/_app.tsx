@@ -3,7 +3,7 @@ import CookieConsent from 'react-cookie-consent';
 import { DefaultSeo } from 'next-seo';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 import NextNProgress from 'nextjs-progressbar';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactLenis } from 'lenis/react';

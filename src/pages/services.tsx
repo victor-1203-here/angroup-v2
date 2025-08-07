@@ -87,7 +87,7 @@ export default function Services() {
                             <div className="mt-4 md:mt-6">
                                 <h3 className="mb-2 text-xl text-[#38947e]">3. Powering Your Operations</h3>
                                 <p className="text-lg text-gray-700">
-                                    Whether you're in manufacturing, logistics, agriculture, or construction, An Group powers your operations with
+                                    Whether you&apos;re in manufacturing, logistics, agriculture, or construction, An Group powers your operations with
                                     dependable fuel and chemical solutions. Our comprehensive service offering is backed by strict SOPs, regular
                                     maintenance, and an expert logistics team, giving you peace of mind and uninterrupted supply.
                                 </p>
