@@ -192,7 +192,7 @@ export default function MySwiper() {
                                             type="button"
                                             aria-label="Previous slide"
                                             onClick={() => swiperRef.current?.slidePrev()}
-                                            className="custom-prev-button rounded-full p-2 [background:linear-gradient(90deg,#102a00,#00cca5)] focus:outline-none"
+                                            className="custom-prev-button rounded-full p-2 [background:#38947e] focus:outline-none"
                                         >
                                             <FaArrowLeft />
                                         </button>
@@ -203,7 +203,7 @@ export default function MySwiper() {
                                             type="button"
                                             aria-label="Next slide"
                                             onClick={() => swiperRef.current?.slideNext()}
-                                            className="custom-next-button rounded-full p-2 [background:linear-gradient(270deg,#102a00,#00cca5)] focus:outline-none"
+                                            className="custom-next-button rounded-full p-2 [background:#38947e] focus:outline-none"
                                         >
                                             <FaArrowRight />
                                         </button>
@@ -272,7 +272,7 @@ export default function MySwiper() {
                     {/* Internal navigation: replaced <a> with Link */}
                     <Link
                         href="/honor"
-                        className="flex items-center gap-2 self-start rounded-xl bg-gradient-to-b from-[#102a00] to-[#00cca5] px-6 py-2 font-semibold text-white shadow-lg md:self-center"
+                        className="flex items-center gap-2 self-start rounded-xl bg-[#38947e] px-6 py-2 font-semibold text-white shadow-lg md:self-center"
                     >
                         <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                             <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
@@ -313,7 +313,7 @@ export default function MySwiper() {
                                 height={384} // Approximate height, same as h-96
                                 className="w-full object-cover md:h-96"
                             />
-                            <div className="pointer-events-none absolute bottom-0 left-0 w-full rounded-2xl bg-gradient-to-t from-[#102a00]/90 to-[#00cca5] px-16 py-6 text-center opacity-90 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
+                            <div className="pointer-events-none absolute bottom-0 left-0 w-full rounded-2xl bg-[#38947e] px-16 py-6 text-center opacity-90 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
                                 <h3 className="pb-2 text-lg font-semibold text-white">{title}</h3>
                                 <p className="text-sm text-white">{desc}</p>
                             </div>

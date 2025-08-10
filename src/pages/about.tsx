@@ -41,7 +41,7 @@ export default function About() {
                     priority
                 />
                 <div className="absolute inset-0 bg-gray-700 bg-opacity-50"></div>
-                <div className="absolute bottom-4 left-4 z-10 flex max-w-md flex-col p-4 md:p-8">
+                <div className="absolute bottom-10 left-10 z-10 flex max-w-md flex-col p-4 md:p-8">
                     <p className="mb-3 text-base font-medium text-white sm:text-lg md:text-xl">About Us</p>
                     <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-7xl">Our Story</h1>
                 </div>

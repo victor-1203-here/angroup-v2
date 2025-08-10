@@ -27,7 +27,7 @@ export default function Contact() {
             </section>
 
             <section className="relative flex min-h-[100vh] items-center bg-white md:mx-20">
-                <div className="h-screen w-[12.5%] [background:linear-gradient(90deg,rgba(0,204,165,0.7)_0%,rgba(16,42,0,0.7)_100%)] md:w-[45%]"></div>
+                <div className="h-screen w-[12.5%] bg-[#38947e] md:w-[45%]"></div>
                 <div className="flex flex-1 justify-center">
                     <div className="relative w-full max-w-2xl px-6 md:px-0">
                         <p className="mb-8 text-gray-700">
@@ -89,7 +89,7 @@ export default function Contact() {
                             </div>
                             <button
                                 type="submit"
-                                className="mt-6 w-full rounded px-4 py-2 font-semibold text-white shadow transition [background:linear-gradient(180deg,#102a00,#00cca5)] hover:brightness-95 focus:outline-none"
+                                className="mt-6 w-full rounded px-4 py-2 font-semibold text-white shadow transition bg-[#38947e] hover:brightness-95 focus:outline-none"
                             >
                                 Subscribe
                             </button>
@@ -170,7 +170,8 @@ export default function Contact() {
                             <br />
                             14000 Bukit Mertajam
                             <br />
-                            Penang, Malaysia
+                            Penang, Malaysia <br />
+                            Tel: +604 538 6820
                         </div>
                         <div className="md:mb-4">
                             <span className="uppercase text-[#102a00]">Corporate Office :</span>
@@ -190,9 +191,6 @@ export default function Contact() {
                             Sat: 9AM - 1PM
                             <br />
                             Closed on Public Holidays
-                        </div>
-                        <div className="md:mb-4">
-                            <span className="uppercase text-[#102a00]">Tel :</span> +604 538 6820
                         </div>
                         <div>
                             <span className="uppercase text-[#102a00]">Email :</span>

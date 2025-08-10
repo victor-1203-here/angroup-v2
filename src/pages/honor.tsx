@@ -148,13 +148,13 @@ export default function Honor() {
                 </div>
             </section>
 
-            <section className="w-full px-4 py-12 [background:linear-gradient(90deg,rgba(0,204,165,0.7)_0%,rgba(16,42,0,0.7)_100%)] md:px-10">
+            <section className="w-full px-4 py-12 bg-[#38947e] md:px-10">
                 <div className="mx-auto flex max-w-[96rem] flex-col items-start md:flex-row md:gap-24">
                     <div className="w-full md:w-1/2">
                         <div className="mb-6 flex justify-center">
                             <button
                                 className={`rounded-bl-md rounded-tl-md px-8 py-2 font-semibold shadow-md ${
-                                    activeTab === 'honors' ? 'bg-white text-green-700' : 'bg-gradient-to-b from-[#07dfb5] to-[#295b40] text-white'
+                                    activeTab === 'honors' ? 'bg-white text-green-700' : 'bg-[#38947e] text-white'
                                 }`}
                                 onClick={() => setActiveTab('honors')}
                             >
@@ -162,7 +162,7 @@ export default function Honor() {
                             </button>
                             <button
                                 className={`ml-[-4px] rounded-br-md rounded-tr-md px-8 py-2 font-semibold shadow-md ${
-                                    activeTab === 'licenses' ? 'bg-white text-green-700' : 'bg-gradient-to-b from-[#07dfb5] to-[#295b40] text-white'
+                                    activeTab === 'licenses' ? 'bg-white text-green-700' : 'bg-[#38947e] text-white'
                                 }`}
                                 onClick={() => setActiveTab('licenses')}
                             >

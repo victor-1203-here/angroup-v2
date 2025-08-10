@@ -69,7 +69,7 @@ export default function App({ Component, pageProps }: AppProps) {
                         style={{ background: '#2B373B' }}
                         buttonStyle={{
                             color: '#fff',
-                            background: 'linear-gradient(180deg, #102a00, #00cca5)',
+                            background: '#38947e',
                             fontSize: '13px',
                             padding: '8px 24px',
                             borderRadius: '5px',

@@ -71,10 +71,8 @@ export default function Header() {
             <header
                 className={`fixed left-0 top-0 z-50 flex min-w-full justify-end px-2 py-8 transition-opacity transition-transform duration-300 ease-in-out md:h-48 md:px-12 md:py-4 ${isAtTop ? (isWhiteBG ? 'bg-transparent text-black' : 'bg-transparent text-white') : isScrollingUp ? 'bg-white bg-opacity-80 text-black' : ''} ${showHeader || isOpen ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-full opacity-0'} `}
             >
-                <div
-                    className={`flex w-[90%] justify-end md:h-16 md:border-b md:px-12 md:py-4 ${isAtTop ? (isWhiteBG ? 'md:border-black' : 'md:border-white') : isScrollingUp ? 'md:border-black' : ''} `}
-                >
-                    <nav className="hidden gap-6 md:flex md:gap-10 lg:gap-16 xl:gap-20 md:pt-4">
+                <div className="flex w-[90%] justify-end md:h-16 md:py-4">
+                    <nav className="hidden gap-6 md:flex md:gap-10 md:pt-8 lg:gap-16 xl:gap-20 text-xl">
                         {navLinks.map(({ label, href }, i) => (
                             <a key={i} href={href} className="transition-colors duration-200 hover:text-[#38947e]">
                                 {label}
@@ -82,7 +80,7 @@ export default function Header() {
                         ))}
                     </nav>
 
-                    <div className="flex items-center space-x-4 md:pl-20 md:px-0">
+                    <div className="flex items-center space-x-4 md:px-0 md:pl-20">
                         {/* <button
                             type="button"
                             aria-label="Open search"

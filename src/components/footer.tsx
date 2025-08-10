@@ -68,7 +68,7 @@ export function CookieSettingsModal({ open, onClose }) {
                 </div>
                 <button
                     type="button"
-                    className="mt-4 w-full rounded px-4 py-2 font-semibold text-white shadow transition [background:linear-gradient(180deg,#102a00,#00cca5)] hover:brightness-95 focus:outline-none"
+                    className="mt-4 w-full rounded px-4 py-2 font-semibold text-white shadow transition bg-[#38947e] hover:brightness-95 focus:outline-none"
                     onClick={handleSave}
                 >
                     Save Preferences
