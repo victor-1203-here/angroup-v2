@@ -4,7 +4,7 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const honorsData = [
@@ -247,11 +247,17 @@ export default function Honor() {
                                             levels of safety, efficiency, and service quality.
                                         </p>
                                         <Swiper
-                                            modules={[Pagination]}
+                                            modules={[Pagination, Navigation]}
                                             spaceBetween={16}
                                             slidesPerView={1}
                                             pagination={{ clickable: true }}
-                                            style={{ maxWidth: 800 }}
+                                            navigation={true}
+                                            style={{
+                                                maxWidth: 800,
+                                                '--swiper-navigation-color': '#38947e', 
+                                                '--swiper-pagination-color': '#38947e', 
+                                                '--swiper-pagination-bullet-inactive-color': '#7bb49b', 
+                                            }}
                                             breakpoints={{
                                                 640: { slidesPerView: 1 },
                                                 768: { slidesPerView: 2 },
@@ -288,7 +294,7 @@ export default function Honor() {
                         {locations.map((loc) => (
                             <div
                                 key={loc.name}
-                                className="absolute h-2 w-2 -translate-x-1/2 -translate-y-1/2 animate-pulse shadow-md"
+                                className="group absolute h-2 w-2 -translate-x-1/2 -translate-y-1/2 shadow-md"
                                 style={{
                                     left: loc.left,
                                     top: loc.top,
@@ -296,7 +302,10 @@ export default function Honor() {
                                 }}
                                 title={loc.name}
                             >
-                                <div className="h-full w-full rounded-full border-2 border-[#38947e] bg-white shadow-lg"></div>
+                                <div className="h-full w-full animate-pulse rounded-full border-2 border-[#38947e] bg-white shadow-lg group-hover:animate-none"></div>
+                                <div className="pointer-events-none absolute bottom-full left-1/2 mb-2 hidden w-max -translate-x-1/2 rounded bg-gray-800 px-2 py-1 text-xs font-semibold text-white opacity-0 transition-opacity group-hover:block group-hover:opacity-100">
+                                    {loc.name}
+                                </div>
                             </div>
                         ))}
                     </div>
