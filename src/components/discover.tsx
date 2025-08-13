@@ -7,12 +7,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 export default function Discover() {
     return (
         <section className="flex flex-col items-center">
-            <div className="relative hidden w-full bg-[#38947e] md:block md:px-8 md:py-12">
+            <div className="relative hidden w-full bg-[#64c4ae] md:block md:px-8 md:py-12">
                 <div className="mb-8 ml-12 w-full px-8 text-left">
                     <h2 className="font-semibold md:text-4xl md:text-[#fff]">Discover More</h2>
                 </div>
 
-                <div className="relative hidden min-h-[370px] w-full items-center justify-between bg-[#38947e] md:flex md:min-h-[430px] md:p-2">
+                <div className="relative hidden min-h-[370px] w-full items-center justify-between md:flex md:min-h-[430px] md:p-2">
                     <div className="relative mx-2 flex-1 overflow-hidden rounded-[1.5rem]">
                         <Image
                             src="/images/home/photo_017.jpg"

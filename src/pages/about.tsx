@@ -25,7 +25,7 @@ export default function About() {
                 <meta name="description" content="Learn more about AN Group, our values, mission, and team." />
             </Head>
 
-            <section className="relative h-screen w-full">
+            <section className="relative flex flex-col h-screen w-full">
                 <Image
                     src="/images/about/pic_01.jpg"
                     alt="About Us Story"
@@ -41,9 +41,17 @@ export default function About() {
                     priority
                 />
                 <div className="absolute inset-0 bg-gray-700 bg-opacity-50"></div>
-                <div className="absolute bottom-10 left-10 z-10 flex max-w-md flex-col p-4 md:p-8">
+                {/* <div className="absolute bottom-10 left-10 z-10 flex max-w-md flex-col p-4 md:p-8">
                     <p className="mb-3 text-base font-medium text-white sm:text-lg md:text-xl">About Us</p>
                     <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-7xl">Our Story</h1>
+                </div> */}
+                <div className="relative z-10 flex flex-1 flex-col items-center justify-center text-left md:items-start">
+                    <div className="px-6 py-10 [text-shadow:0_4px_10px_rgba(0,0,0,0.8)] md:mx-12 md:p-8 md:px-8">
+                        <h1 className="mb-4 text-2xl font-semibold text-white md:text-4xl">About Us</h1>
+                        <p className="mb-6 text-xl text-white md:text-4xl">
+                            Our Story
+                        </p>
+                    </div>
                 </div>
             </section>
 

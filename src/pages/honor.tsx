@@ -117,6 +117,21 @@ const licenses = [
     { img: '/images/honor/pda_06.png' },
 ];
 
+const locations = [
+    { name: 'Netherlands', left: '49%', top: '46%' },
+    { name: 'Europe', left: '55%', top: '49%' },
+    { name: 'Myanmar', left: '75%', top: '59%' },
+    { name: 'Thailand', left: '75%', top: '62%' },
+    { name: 'Laos', left: '77%', top: '60%' },
+    { name: 'Cambodia', left: '76%', top: '61%' },
+    { name: 'Vietnam', left: '77%', top: '62%' },
+    { name: 'Malaysia', left: '76%', top: '64%' },
+    { name: 'Singapore', left: '76%', top: '65%' },
+    { name: 'Indonesia', left: '79%', top: '66%' },
+    { name: 'Australia', left: '85%', top: '74%' },
+    { name: 'China', left: '78%', top: '55%' },
+];
+
 export default function Honor() {
     const [activeTab, setActiveTab] = React.useState<'honors' | 'licenses'>('honors');
     return (
@@ -126,7 +141,7 @@ export default function Honor() {
                 <meta name="description" content="Learn more about AN Group, our values, mission, and team." />
             </Head>
 
-            <section className="relative h-screen w-full">
+            <section className="relative flex h-screen w-full flex-col">
                 <Image
                     src="/images/honor/pic_001.jpg"
                     alt="About Us Story"
@@ -142,13 +157,19 @@ export default function Honor() {
                     priority
                 />
                 <div className="absolute inset-0 bg-gray-700 bg-opacity-50"></div>
-                <div className="absolute bottom-4 left-4 z-10 flex max-w-md flex-col p-4 md:p-8">
+                {/* <div className="absolute bottom-4 left-4 z-10 flex max-w-md flex-col p-4 md:p-8">
                     <p className="mb-3 text-base font-medium text-white sm:text-lg md:text-xl">Honors & Licences</p>
                     <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-7xl">Honors</h1>
+                </div> */}
+                <div className="relative z-10 flex flex-1 flex-col items-center justify-center text-left md:items-start">
+                    <div className="px-6 py-10 [text-shadow:0_4px_10px_rgba(0,0,0,0.8)] md:mx-12 md:p-8 md:px-8">
+                        <h1 className="mb-4 text-2xl font-semibold text-white md:text-4xl">Honors & Licences</h1>
+                        <p className="mb-6 text-xl text-white md:text-4xl">Honors</p>
+                    </div>
                 </div>
             </section>
 
-            <section className="w-full px-4 py-12 bg-[#38947e] md:px-10">
+            <section className="w-full bg-[#64c4ae] px-4 py-12 md:px-10">
                 <div className="mx-auto flex max-w-[96rem] flex-col items-start md:flex-row md:gap-24">
                     <div className="w-full md:w-1/2">
                         <div className="mb-6 flex justify-center">
@@ -256,14 +277,28 @@ export default function Honor() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex hidden min-h-[300px] w-full items-center justify-center md:my-8 md:block md:min-h-[500px] md:w-1/2 md:py-20">
+                    <div className="flex hidden min-h-[300px] w-full items-center justify-center md:relative md:my-8 md:block md:min-h-[500px] md:w-1/2 md:py-20">
                         <Image
-                            src="/images/honor/map.png"
+                            src="/images/honor/map_2.png"
                             alt="World Map"
                             width={600}
                             height={450}
                             className="h-full max-h-[400px] w-full max-w-full rounded-3xl object-contain md:max-h-[600px] md:object-cover"
                         />
+                        {locations.map((loc) => (
+                            <div
+                                key={loc.name}
+                                className="absolute h-2 w-2 -translate-x-1/2 -translate-y-1/2 animate-pulse shadow-md"
+                                style={{
+                                    left: loc.left,
+                                    top: loc.top,
+                                    animationDuration: '700ms',
+                                }}
+                                title={loc.name}
+                            >
+                                <div className="h-full w-full rounded-full border-2 border-[#38947e] bg-white shadow-lg"></div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

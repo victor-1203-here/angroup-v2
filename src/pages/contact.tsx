@@ -17,9 +17,16 @@ export default function Contact() {
                     className="object-cover [object-position:10%_center] md:[object-position:left_center]"
                 />
                 <div className="absolute inset-0 bg-gray-900 bg-opacity-30"></div>
-                <div className="relative z-10 flex flex-1 flex-col items-center justify-center text-left md:absolute md:bottom-4 md:left-4 md:items-start md:justify-end">
+                {/* <div className="relative z-10 flex flex-1 flex-col items-center justify-center text-left md:absolute md:bottom-4 md:left-4 md:items-start md:justify-end">
                     <div className="px-6 py-10 [text-shadow:0_4px_10px_rgba(0,0,0,0.8)] md:mx-12 md:p-8 md:px-8">
                         <p className="mb-2 text-sm tracking-wide text-white/80 md:text-2xl">An Group</p>
+                        <h1 className="mb-4 text-2xl font-semibold text-white md:text-4xl">Connect with us</h1>
+                        <p className="mb-6 text-xl text-white md:text-4xl">Stay in-the-know on what we do by subscribing to our email updates.</p>
+                    </div>
+                </div> */}
+                <div className="relative z-10 flex flex-1 flex-col items-center justify-center text-left md:items-start">
+                    <div className="px-6 py-10 [text-shadow:0_4px_10px_rgba(0,0,0,0.8)] md:mx-12 md:p-8 md:px-8">
+                        <h1 className="mb-4 text-2xl font-semibold text-white md:text-4xl">An Group</h1>
                         <h1 className="mb-4 text-2xl font-semibold text-white md:text-4xl">Connect with us</h1>
                         <p className="mb-6 text-xl text-white md:text-4xl">Stay in-the-know on what we do by subscribing to our email updates.</p>
                     </div>
@@ -27,7 +34,7 @@ export default function Contact() {
             </section>
 
             <section className="relative flex min-h-[100vh] items-center bg-white md:mx-20">
-                <div className="h-screen w-[12.5%] bg-[#38947e] md:w-[45%]"></div>
+                <div className="h-screen w-[12.5%] bg-[#64c4ae] md:w-[45%]"></div>
                 <div className="flex flex-1 justify-center">
                     <div className="relative w-full max-w-2xl px-6 md:px-0">
                         <p className="mb-8 text-gray-700">
@@ -89,7 +96,7 @@ export default function Contact() {
                             </div>
                             <button
                                 type="submit"
-                                className="mt-6 w-full rounded px-4 py-2 font-semibold text-white shadow transition bg-[#38947e] hover:brightness-95 focus:outline-none"
+                                className="mt-6 w-full rounded bg-[#64c4ae] px-4 py-2 font-semibold text-white shadow transition hover:brightness-95 focus:outline-none"
                             >
                                 Subscribe
                             </button>
@@ -113,7 +120,7 @@ export default function Contact() {
                 </div>
             </section>
 
-            <section className="flex min-h-screen flex-col justify-center px-4 py-8 [background:linear-gradient(90deg,rgba(0,204,165,0.2)_0%,rgba(16,42,0,0.2)_100%)]">
+            <section className="flex min-h-screen flex-col justify-center px-4 py-8 bg-[#64c4ae]">
                 <div className="mx-auto flex w-full max-w-6xl flex-col md:flex-row-reverse md:justify-between md:gap-16">
                     <form className="mb-8 flex-1 space-y-4 p-4 md:space-y-8 md:p-10 md:text-lg">
                         <div className="flex gap-4 md:gap-6">
