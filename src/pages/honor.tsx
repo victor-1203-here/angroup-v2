@@ -109,12 +109,12 @@ const honorsData = [
 ];
 
 const licenses = [
-    { img: '/images/honor/pda_01.png' },
-    { img: '/images/honor/pda_02.png' },
-    { img: '/images/honor/pda_03.png' },
-    { img: '/images/honor/pda_04.png' },
-    { img: '/images/honor/pda_05.png' },
-    { img: '/images/honor/pda_06.png' },
+    { img: '/v2/images/honor/pda_01.png' },
+    { img: '/v2/images/honor/pda_02.png' },
+    { img: '/v2/images/honor/pda_03.png' },
+    { img: '/v2/images/honor/pda_04.png' },
+    { img: '/v2/images/honor/pda_05.png' },
+    { img: '/v2/images/honor/pda_06.png' },
 ];
 
 const locations = [
@@ -143,7 +143,7 @@ export default function Honor() {
 
             <section className="relative flex h-screen w-full flex-col">
                 <Image
-                    src="/images/honor/main.jpg"
+                    src="/v2/images/honor/main.jpg"
                     alt="About Us Story"
                     style={{
                         position: 'absolute',
@@ -280,7 +280,7 @@ export default function Honor() {
                     </div>
                     <div className="flex hidden min-h-[300px] w-full items-center justify-center md:relative md:my-8 md:block md:min-h-[500px] md:w-1/2 md:py-20">
                         <Image
-                            src="/images/honor/map_2.png"
+                            src="/v2/images/honor/map_2.png"
                             alt="World Map"
                             width={600}
                             height={450}

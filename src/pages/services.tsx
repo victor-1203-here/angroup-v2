@@ -11,7 +11,7 @@ export default function Services() {
             </Head>
             <section className="relative flex min-h-screen flex-col">
                 <Image
-                    src="/images/service/main.jpg"
+                    src="/v2/images/service/main.jpg"
                     alt="Connect with us"
                     fill
                     priority
@@ -43,7 +43,7 @@ export default function Services() {
                     <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-x-[9rem] md:gap-y-20">
                         <div>
                             <Image
-                                src="/images/service/energy_solution.jpg"
+                                src="/v2/images/service/energy_solution.jpg"
                                 alt="Energy Solutions"
                                 width={600} 
                                 height={208} 
@@ -60,7 +60,7 @@ export default function Services() {
                         </div>
                         <div>
                             <Image
-                                src="/images/service/deliver.jpg"
+                                src="/v2/images/service/deliver.jpg"
                                 alt="What We Deliver"
                                 width={600}
                                 height={208}
@@ -78,7 +78,7 @@ export default function Services() {
                         </div>
                         <div>
                             <Image
-                                src="/images/service/powering.jpg"
+                                src="/v2/images/service/powering.jpg"
                                 alt="Powering Your Operations"
                                 width={600}
                                 height={208}
@@ -95,7 +95,7 @@ export default function Services() {
                         </div>
                         <div>
                             <Image
-                                src="/images/service/reliable_supply.jpg"
+                                src="/v2/images/service/reliable_supply.jpg"
                                 alt="Reliable Supply"
                                 width={600}
                                 height={208}
@@ -112,7 +112,7 @@ export default function Services() {
                         </div>
                         <div>
                             <Image
-                                src="/images/service/fuel.jpg"
+                                src="/v2/images/service/fuel.jpg"
                                 alt="Powering Your Operations"
                                 width={600}
                                 height={208}
@@ -129,7 +129,7 @@ export default function Services() {
                         </div>
                         <div>
                             <Image
-                                src="/images/service/e2e_distribution.jpg"
+                                src="/v2/images/service/e2e_distribution.jpg"
                                 alt="Reliable Supply"
                                 width={600}
                                 height={208}

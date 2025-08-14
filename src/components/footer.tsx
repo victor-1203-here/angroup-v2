@@ -87,10 +87,10 @@ const Footer = () => {
                 <div className="flex h-28 flex-col justify-between md:h-24 md:flex-row">
                     <div className="flex justify-center md:justify-end">
                         <nav className="flex flex-row gap-6 text-xs font-medium text-gray-700">
-                            <Link href="/terms" className="hover:underline">
+                            <Link href="/v2/terms" className="hover:underline">
                                 Terms of Use
                             </Link>
-                            <Link href="/privacy" className="hover:underline">
+                            <Link href="/v2/privacy" className="hover:underline">
                                 Privacy Statement
                             </Link>
                             <button
