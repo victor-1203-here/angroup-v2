@@ -248,16 +248,11 @@ export default function Honor() {
                                         </p>
                                         <Swiper
                                             modules={[Pagination, Navigation]}
+                                            className="[--swiper-navigation-color:#38947e] [--swiper-pagination-color:#38947e] [--swiper-pagination-bullet-inactive-color:#7bb49b]"
                                             spaceBetween={16}
                                             slidesPerView={1}
                                             pagination={{ clickable: true }}
                                             navigation={true}
-                                            style={{
-                                                maxWidth: 800,
-                                                '--swiper-navigation-color': '#38947e', 
-                                                '--swiper-pagination-color': '#38947e', 
-                                                '--swiper-pagination-bullet-inactive-color': '#7bb49b', 
-                                            }}
                                             breakpoints={{
                                                 640: { slidesPerView: 1 },
                                                 768: { slidesPerView: 2 },
