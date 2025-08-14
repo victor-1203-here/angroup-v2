@@ -12,31 +12,31 @@ const slides = [
     {
         title: 'Built on Purpose',
         description: 'Delivering reliable petroleum and chemical solutions across Asia and Europe.',
-        image: '/images/home/photo_001.jpg',
+        image: '/images/home/slide_photo_1.jpg',
         link: '/services',
     },
     {
         title: 'Engineered for Excellence',
         description: 'Driven by precision, built on integrity — we’re here to move industries forward.',
-        image: '/images/home/photo_002.jpg',
+        image: '/images/home/slide_photo_2.jpg',
         link: '/services',
     },
     {
         title: 'One Partner. Total Solutions',
         description: 'From fuel to logistics, we’re your one-stop petroleum service provider.',
-        image: '/images/home/photo_003.jpg',
+        image: '/images/home/slide_photo_3.jpg',
         link: '/services',
     },
     {
         title: 'Where Safety Meets Scale',
         description: 'Extensive network, proven SOPs, and uncompromised safety standards.',
-        image: '/images/home/photo_004.jpg',
+        image: '/images/home/slide_photo_4.jpg',
         link: '/services',
     },
     {
         title: 'Your Energy. Delivered',
         description: 'Wide coverage, timely transportation, and responsive customer support.',
-        image: '/images/home/photo_005.jpg',
+        image: '/images/home/slide_photo_5.jpg',
         link: '/services',
     },
 ];
@@ -51,7 +51,7 @@ const highlights = [
                 receive dependable access to petroleum and chemical products — no matter where they operate.
             </>
         ),
-        imageSrc: '/images/home/photo_012.jpg',
+        imageSrc: '/images/home/highlight_1.jpg',
     },
     {
         title: 'Committed to Energy Transition',
@@ -62,7 +62,7 @@ const highlights = [
                 investing in cleaner, more efficient solutions for long-term impact.
             </>
         ),
-        imageSrc: '/images/home/photo_013.jpg',
+        imageSrc: '/images/home/highlight_2.jpg',
     },
     {
         title: 'Strong Logistics & Storage Capabilities',
@@ -73,7 +73,7 @@ const highlights = [
                 and safe delivery to meet even the most demanding supply requirements.
             </>
         ),
-        imageSrc: '/images/home/photo_014.jpg',
+        imageSrc: '/images/home/highlight_3.jpg',
     },
     {
         title: 'Recognized Industry Leader',
@@ -84,7 +84,7 @@ const highlights = [
                 relationships, and high-performance delivery across multiple markets.
             </>
         ),
-        imageSrc: '/images/home/photo_015.jpg',
+        imageSrc: '/images/home/highlight_4.jpg',
     },
     {
         title: 'Committed to Energy Transition',
@@ -95,7 +95,7 @@ const highlights = [
                 investing in cleaner, more efficient solutions for long-term impact.
             </>
         ),
-        imageSrc: '/images/home/photo_016.jpg',
+        imageSrc: '/images/home/highlight_5.jpg',
     },
 ];
 
@@ -284,19 +284,19 @@ export default function MySwiper() {
                 <div className="flex flex-col gap-6 md:flex-row">
                     {[
                         {
-                            src: '/images/home/photo_006.jpg',
+                            src: '/images/home/journey_1.jpg',
                             alt: 'Strengthening the Core',
                             title: 'Strengthening the Core',
                             desc: 'Enhancing operations with greater safety and efficiency while lowering emissions to build a solid, future-ready foundation.',
                         },
                         {
-                            src: '/images/home/photo_007.jpg',
+                            src: '/images/home/journey_2.jpg',
                             alt: 'Capturing New Growth',
                             title: 'Capturing New Growth',
                             desc: 'Expanding into renewables, specialty chemicals, hydrogen, and carbon solutions to meet evolving energy needs.',
                         },
                         {
-                            src: '/images/home/photo_008.jpg',
+                            src: '/images/home/journey_3.jpg',
                             alt: 'Achieving Net Zero',
                             title: 'Achieving Net Zero',
                             desc: 'Committed to a carbon-neutral future by 2050, with ongoing efforts to reduce emissions across all operations.',
@@ -336,7 +336,7 @@ export default function MySwiper() {
                 <div className="mb-10 overflow-hidden rounded-[2.5rem] shadow-lg">
                     <div className="relative">
                         <Image
-                            src="/images/home/photo_009.jpg"
+                            src="/images/home/vision_bg.jpg"
                             alt="Vision"
                             width={1920} // full width approx
                             height={224} // scaled height for h-56 (14rem * 16 = 224px)
@@ -354,7 +354,7 @@ export default function MySwiper() {
                 </div>
                 <div className="mb-10 overflow-hidden rounded-[2.5rem] shadow-lg">
                     <div className="relative">
-                        <Image src="/images/home/photo_010.jpg" alt="Mission" width={1920} height={224} className="h-56 w-full object-cover" />
+                        <Image src="/images/home/mission_bg.jpg" alt="Mission" width={1920} height={224} className="h-56 w-full object-cover" />
                         <div className="absolute inset-0 bg-black opacity-50"></div>
                         <div className="absolute inset-0 flex flex-row items-center justify-between gap-10 p-8 md:mx-12">
                             <h3 className="text-3xl font-semibold text-white md:text-5xl">Mission</h3>
@@ -366,7 +366,7 @@ export default function MySwiper() {
                 </div>
                 <div className="overflow-hidden rounded-[2.5rem] shadow-lg">
                     <div className="relative">
-                        <Image src="/images/home/photo_011.jpg" alt="Values" width={1920} height={224} className="h-56 w-full object-cover" />
+                        <Image src="/images/home/values_bg.jpg" alt="Values" width={1920} height={224} className="h-56 w-full object-cover" />
                         <div className="absolute inset-0 bg-black opacity-50"></div>
                         <div className="absolute inset-0 flex flex-row items-center justify-between gap-10 p-8 md:mx-12">
                             <h3 className="text-3xl font-semibold text-white md:text-5xl">Values</h3>

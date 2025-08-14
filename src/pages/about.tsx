@@ -82,7 +82,7 @@ export default function About() {
                     <div className="z-10 mt-8 flex w-full items-center justify-center md:mt-0 md:w-2/3 md:justify-start">
                         <div className="flex h-72 w-72 items-center justify-center overflow-hidden rounded-full shadow-2xl shadow-black md:h-[32rem] md:w-[32rem]">
                             <Image
-                                src="/images/about/watching-backsot.jpeg"
+                                src="/images/about/circle_bg.jpg"
                                 alt="Refinery workers"
                                 width={512}
                                 height={512}

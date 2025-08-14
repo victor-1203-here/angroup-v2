@@ -143,7 +143,7 @@ export default function Honor() {
 
             <section className="relative flex h-screen w-full flex-col">
                 <Image
-                    src="/images/honor/pic_001.jpg"
+                    src="/images/honor/main.jpg"
                     alt="About Us Story"
                     style={{
                         position: 'absolute',
@@ -302,7 +302,7 @@ export default function Honor() {
                                 }}
                                 title={loc.name}
                             >
-                                <div className="h-full w-full animate-pulse rounded-full border-2 border-[#38947e] bg-white shadow-lg group-hover:animate-none"></div>
+                                <div className="h-full w-full animate-pulse rounded-full border-2 border-[#000000] bg-white shadow-lg group-hover:animate-none"></div>
                                 <div className="pointer-events-none absolute bottom-full left-1/2 mb-2 hidden w-max -translate-x-1/2 rounded bg-gray-800 px-2 py-1 text-xs font-semibold text-white opacity-0 transition-opacity group-hover:block group-hover:opacity-100">
                                     {loc.name}
                                 </div>

@@ -10,7 +10,7 @@ export default function Contact() {
             </Head>
             <section className="relative flex min-h-screen flex-col">
                 <Image
-                    src="/images/contact/pic_001.jpg"
+                    src="/images/contact/contact_1.jpg"
                     alt="Connect with us"
                     fill
                     priority
@@ -106,7 +106,7 @@ export default function Contact() {
             </section>
 
             <section className="relative flex min-h-screen w-full flex-col overflow-hidden">
-                <Image src="/images/contact/pic_002.jpg" alt="Contact Us - Hero Background" fill priority className="object-cover object-center" />
+                <Image src="/images/contact/contact_2.jpg" alt="Contact Us - Hero Background" fill priority className="object-cover object-center" />
                 <div className="absolute inset-0 bg-gray-900 bg-opacity-30"></div>
                 <div className="relative z-10 flex flex-1 flex-col items-start justify-center text-left md:absolute md:bottom-4 md:left-4 md:items-start md:justify-end">
                     <div className="px-6 py-10 [text-shadow:0_4px_10px_rgba(0,0,0,0.8)] md:mx-12 md:p-8 md:px-8">
