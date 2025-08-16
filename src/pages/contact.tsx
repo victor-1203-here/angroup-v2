@@ -157,7 +157,7 @@ export default function Contact() {
                             required
                             className="w-full resize-none rounded-lg border border-gray-300 px-3 py-2 text-sm outline-[#00cca5]"
                         />
-                        <div className="inline-block w-full rounded-lg p-[2px] [background:linear-gradient(90deg,#00cca5_0%,#102a00_100%)]">
+                        <div className="inline-block w-full rounded-lg p-[2px] bg-[#64c4ae]">
                             <button
                                 type="submit"
                                 className="w-full rounded-lg border-none bg-white py-2 text-base font-semibold text-black outline-none transition hover:brightness-95"
@@ -167,7 +167,7 @@ export default function Contact() {
                         </div>
                     </form>
 
-                    <div className="mb-4 mt-2 grid grid-cols-3 gap-x-1 gap-y-4 text-[12px] md:block md:w-1/2 md:max-w-xs md:pr-8 md:text-base">
+                    <div className="mb-4 mt-2 grid grid-cols-3 gap-x-1 gap-y-4 text-white text-[12px] md:block md:w-1/2 md:max-w-xs md:pr-8 md:text-base">
                         <div className="md:mb-4">
                             <span className="uppercase text-[#102a00]">Headquarters :</span>
                             <br />
@@ -202,8 +202,8 @@ export default function Contact() {
                         <div>
                             <span className="uppercase text-[#102a00]">Email :</span>
                             <br />
-                            <a href="mailto:info@angroup.com.my" className="">
-                                info@angroup.com.my
+                            <a href="mailto:contact@angroup.my" className="">
+                                contact@angroup.my
                             </a>
                         </div>
                     </div>

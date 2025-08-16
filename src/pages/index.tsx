@@ -271,7 +271,7 @@ export default function MySwiper() {
                     </div>
                     {/* Internal navigation: replaced <a> with Link */}
                     <Link
-                        href="/v2/honor"
+                        href="/honor"
                         className="flex items-center gap-2 self-start rounded-xl bg-[#38947e] px-6 py-2 font-semibold text-white shadow-lg md:self-center"
                     >
                         <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">

@@ -106,6 +106,28 @@ const honorsData = [
             },
         ],
     },
+    {
+        year: '2020',
+        awards: [
+            {
+                title: 'Commercial Channel Partnet Submit',
+                achievement: 'Nothern Region 2020 CHAMPION',
+            },
+            {
+                title: 'Commercial Channel Partnet Submit',
+                achievement: 'NATIONAL Award 2020 2nd Runner Up',
+            },
+        ],
+    },
+    {
+        year: '2024',
+        awards: [
+            {
+                title: 'Commercial Business Partnet Excellence Award (CBPEA)',
+                achievement: 'Champion - Top 3 Northern Region',
+            },
+        ],
+    },
 ];
 
 const licenses = [
@@ -134,6 +156,33 @@ const locations = [
 
 export default function Honor() {
     const [activeTab, setActiveTab] = React.useState<'honors' | 'licenses'>('honors');
+    const [previewSrc, setPreviewSrc] = React.useState<string | null>(null);
+    const [showModal, setShowModal] = React.useState(false);
+
+    // put inside Honor component
+    const closeWithAnim = React.useCallback(() => {
+        setShowModal(false);
+        setTimeout(() => setPreviewSrc(null), 300); // match duration-300
+    }, []);
+
+
+    React.useEffect(() => {
+    if (!previewSrc) return;
+
+    const handleClose = () => closeWithAnim();
+
+    // close on scroll, keydown, or touch
+    window.addEventListener("scroll", handleClose);
+    window.addEventListener("keydown", handleClose);
+    window.addEventListener("touchstart", handleClose);
+
+    return () => {
+        window.removeEventListener("scroll", handleClose);
+        window.removeEventListener("keydown", handleClose);
+        window.removeEventListener("touchstart", handleClose);
+    };
+    }, [previewSrc, closeWithAnim]);
+
     return (
         <>
             <Head>
@@ -200,18 +249,18 @@ export default function Honor() {
                                             <table className="w-full text-left text-xs md:text-base">
                                                 <thead>
                                                     <tr>
-                                                        <th className="py-2 pr-4">Year</th>
-                                                        <th className="py-2 pr-4">Award</th>
-                                                        <th className="py-2">Achievement Level</th>
+                                                        <th className="py-2 pr-4 text-white">Year</th>
+                                                        <th className="py-2 pr-4 text-white">Award</th>
+                                                        <th className="py-2 text-white">Achievement Level</th>
                                                     </tr>
                                                 </thead>
                                                 {honorsData.map(({ year, awards }) => (
                                                     <tbody key={year} className="border-b-2 border-green-700">
                                                         {awards.map((award, idx) => (
                                                             <tr key={year + idx}>
-                                                                <td className="py-1 pr-4">{idx === 0 ? year : ''}</td>
-                                                                <td className="py-1 pr-4">{award.title}</td>
-                                                                <td className="py-1">{award.achievement}</td>
+                                                                <td className="py-1 pr-4 text-white">{idx === 0 ? year : ''}</td>
+                                                                <td className="py-1 pr-4 text-white">{award.title}</td>
+                                                                <td className="py-1 text-white">{award.achievement}</td>
                                                             </tr>
                                                         ))}
                                                     </tbody>
@@ -267,12 +316,41 @@ export default function Honor() {
                                                             alt="licenses"
                                                             width={400}
                                                             height={300}
-                                                            className="mb-2 max-h-[500px] w-full rounded object-contain"
+                                                            className="mb-2 max-h-[500px] w-full rounded object-contain cursor-zoom-in hover:opacity-95"
+                                                            onClick={() => {
+                                                                setPreviewSrc(item.img);
+                                                                setTimeout(() => setShowModal(true), 10);
+                                                            }}
                                                         />
                                                     </div>
                                                 </SwiperSlide>
                                             ))}
                                         </Swiper>
+
+                                        {previewSrc && (
+                                            <div
+                                                className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70"
+                                                onClick={closeWithAnim}
+                                            >
+                                                <div className={`relative max-w-[90vw] md:max-w-[75vw] transform transition-all duration-300 ${showModal ? "scale-100 opacity-100" :"scale-95 opacity-0"}`}
+                                                >
+                                                <Image
+                                                    src={previewSrc}
+                                                    alt="expanded license"
+                                                    width={1600}
+                                                    height={1200}
+                                                    className="h-[95vh] w-full rounded shadow-xl"
+                                                />
+                                                <button
+                                                    className="absolute -right-3 -top-3 rounded-full bg-white/90 px-3 py-1 text-2xl font-bold leading-none text-gray-800"
+                                                    onClick={closeWithAnim}
+                                                    aria-label="Close preview"
+                                                >
+                                                    ×
+                                                </button>
+                                                </div>
+                                            </div>
+                                            )}
                                     </div>
                                 )}
                             </div>
@@ -297,7 +375,7 @@ export default function Honor() {
                                 }}
                                 title={loc.name}
                             >
-                                <div className="h-full w-full animate-pulse rounded-full border-2 border-[#000000] bg-white shadow-lg group-hover:animate-none"></div>
+                                <div className="h-full w-full animate-pulse rounded-full border-2 border-[#057265] bg-[#057265] shadow-lg group-hover:animate-none"></div>
                                 <div className="pointer-events-none absolute bottom-full left-1/2 mb-2 hidden w-max -translate-x-1/2 rounded bg-gray-800 px-2 py-1 text-xs font-semibold text-white opacity-0 transition-opacity group-hover:block group-hover:opacity-100">
                                     {loc.name}
                                 </div>
@@ -308,4 +386,7 @@ export default function Honor() {
             </section>
         </>
     );
+
 }
+
+

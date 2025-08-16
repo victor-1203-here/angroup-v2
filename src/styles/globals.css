@@ -86,3 +86,12 @@
     stroke-dashoffset: -134;
     stroke-width: 6;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 50% !important;           /* vertical center */
+  transform: translateY(-50%); 
+  width: 32px;
+  height: 32px;
+  font-weight: 900;
+}

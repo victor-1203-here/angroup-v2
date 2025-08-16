@@ -22,7 +22,7 @@ export default function Discover() {
                             className="h-96 w-full rounded-[1.5rem] object-cover"
                         />
                         <Link
-                            href="/v2/about"
+                            href="/about"
                             className="absolute right-4 top-4 z-10 flex items-center gap-2 rounded-full bg-[#38947e] px-6 py-2 text-[1rem] font-semibold text-white shadow-lg transition hover:opacity-90"
                         >
                             <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
@@ -45,7 +45,7 @@ export default function Discover() {
                             className="h-96 w-full rounded-[1.5rem] object-cover"
                         />
                         <Link
-                            href="/v2/honor"
+                            href="/honor"
                             className="absolute right-4 top-4 z-10 flex items-center gap-2 rounded-full bg-[#38947e] px-6 py-2 text-[1rem] font-semibold text-white shadow-lg transition hover:opacity-90"
                         >
                             <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@ export default function Discover() {
                             className="h-96 w-full rounded-[1.5rem] object-cover"
                         />
                         <Link
-                            href="/v2/services"
+                            href="/services"
                             className="absolute right-4 top-4 z-10 flex items-center gap-2 rounded-full bg-[#38947e] px-6 py-2 text-[1rem] font-semibold text-white shadow-lg transition hover:opacity-90"
                         >
                             <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
@@ -91,15 +91,15 @@ export default function Discover() {
                         <SwiperSlide>
                             <div className="relative">
                                 <Image
-                                    src="/v2/images/service/service_001.jpg"
+                                    src="/v2/images/home/our_story.jpg"
                                     alt="Our Story"
                                     width={600}
                                     height={256}
                                     className="h-64 w-full rounded-[1.5rem] object-cover"
                                 />
                                 <Link
-                                    href="/v2/about"
-                                    className="absolute right-4 top-3 z-10 flex items-center gap-2 rounded-full bg-gradient-to-b from-[#07dfb5] to-[#295b40] px-4 py-1.5 text-sm font-semibold text-white shadow"
+                                    href="/about"
+                                    className="absolute right-4 top-3 z-10 flex items-center gap-2 rounded-full bg-[#38947e] px-4 py-1.5 text-sm font-semibold text-white shadow"
                                 >
                                     <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                                         <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
@@ -114,15 +114,15 @@ export default function Discover() {
                         <SwiperSlide>
                             <div className="relative">
                                 <Image
-                                    src="/v2/images/service/service_002.jpg"
+                                    src="/v2/images/home/achievements.jpg"
                                     alt="Achievements & Awards"
                                     width={600}
                                     height={256}
                                     className="h-64 w-full rounded-[1.5rem] object-cover"
                                 />
                                 <Link
-                                    href="/v2/honor"
-                                    className="absolute right-4 top-3 z-10 flex items-center gap-2 rounded-full bg-gradient-to-b from-[#07dfb5] to-[#295b40] px-4 py-1.5 text-sm font-semibold text-white shadow"
+                                    href="/honor"
+                                    className="absolute right-4 top-3 z-10 flex items-center gap-2 rounded-full bg-[#38947e] px-4 py-1.5 text-sm font-semibold text-white shadow"
                                 >
                                     <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                                         <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
@@ -137,14 +137,14 @@ export default function Discover() {
                         <SwiperSlide>
                             <div className="relative">
                                 <Image
-                                    src="/v2/images/service/service_003.jpg"
+                                    src="/v2/images/home/inside_an_group.jpg"
                                     alt="Inside An Group"
                                     width={600}
                                     height={256}
                                     className="h-64 w-full rounded-[1.5rem] object-cover"
                                 />
                                 <Link
-                                    href="/v2/services"
+                                    href="/services"
                                     className="absolute right-4 top-3 z-10 flex items-center gap-2 rounded-full bg-[#38947e] px-4 py-1.5 text-sm font-semibold text-white shadow"
                                 >
                                     <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">

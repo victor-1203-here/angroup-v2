@@ -49,7 +49,7 @@ export default function App({ Component, pageProps }: AppProps) {
                     additionalLinkTags={[
                         {
                             rel: 'icon',
-                            href: '/v2/images/icon.svg?',
+                            href: '/images/icon.svg?',
                         },
                     ]}
                 />
