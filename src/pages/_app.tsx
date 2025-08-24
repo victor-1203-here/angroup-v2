@@ -13,6 +13,7 @@ import { gillSans } from '@/lib/fonts';
 import '@/styles/globals.css';
 import Footer from '../components/footer';
 import Header from '../components/header';
+import { ToastContainer } from 'react-toastify';
 
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -59,6 +60,7 @@ export default function App({ Component, pageProps }: AppProps) {
                     <main>
                         <PageTransition>
                             <Component {...pageProps} />
+                            <ToastContainer />
                         </PageTransition>
                     </main>
                     <Footer />

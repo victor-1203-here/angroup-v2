@@ -1,7 +1,41 @@
+import { useMutation } from '@tanstack/react-query';
+import axios from 'axios';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 export default function Contact() {
+    const [enquiryForm, setEnquiryForm] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        message: '',
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
+        setEnquiryForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    };
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        
+        e.preventDefault();
+        submitEnquiry(enquiryForm);
+    };
+
+    const { mutate: submitEnquiry, isPending } = useMutation({
+        mutationFn: (data: typeof enquiryForm) => {
+            return axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/enquiry`, data);
+        },
+        onSuccess: () => {
+            toast.success('Enquiry submitted successfully');
+        },
+        onError: (error: any) => {
+            toast.error(error.response.data.message);
+        },
+    });
+
     return (
         <>
             <Head>
@@ -122,47 +156,63 @@ export default function Contact() {
 
             <section className="flex min-h-screen flex-col justify-center px-4 py-8 bg-[#64c4ae]">
                 <div className="mx-auto flex w-full max-w-6xl flex-col md:flex-row-reverse md:justify-between md:gap-16">
-                    <form className="mb-8 flex-1 space-y-4 p-4 md:space-y-8 md:p-10 md:text-lg">
+                    <form className="mb-8 flex-1 space-y-4 p-4 md:space-y-8 md:p-10 md:text-lg" onSubmit={handleSubmit}>
                         <div className="flex gap-4 md:gap-6">
                             <input
                                 type="text"
                                 placeholder="Name*"
+                                name="name"
                                 required
                                 className="w-1/2 rounded-lg border border-gray-300 px-3 py-2 text-sm outline-[#00cca5]"
+                                value={enquiryForm.name}
+                                onChange={handleChange}
                             />
                             <input
                                 type="email"
                                 placeholder="Email*"
+                                name="email"
                                 required
                                 className="w-1/2 rounded-lg border border-gray-300 px-3 py-2 text-sm outline-[#00cca5]"
+                                value={enquiryForm.email}
+                                onChange={handleChange}
                             />
                         </div>
                         <div className="flex gap-4 md:gap-6">
                             <input
                                 type="tel"
                                 placeholder="Phone*"
+                                name="phone"
                                 required
                                 className="w-1/2 rounded-lg border border-gray-300 px-3 py-2 text-sm outline-[#00cca5]"
+                                value={enquiryForm.phone}
+                                onChange={handleChange}
                             />
                             <input
                                 type="text"
                                 placeholder="Company*"
+                                name="company"
                                 required
                                 className="w-1/2 rounded-lg border border-gray-300 px-3 py-2 text-sm outline-[#00cca5]"
+                                value={enquiryForm.company}
+                                onChange={handleChange}
                             />
                         </div>
                         <textarea
                             placeholder="Message"
                             rows={8}
+                            name="message"
                             required
                             className="w-full resize-none rounded-lg border border-gray-300 px-3 py-2 text-sm outline-[#00cca5]"
+                            value={enquiryForm.message}
+                            onChange={handleChange}
                         />
                         <div className="inline-block w-full rounded-lg p-[2px] bg-[#64c4ae]">
                             <button
                                 type="submit"
-                                className="w-full rounded-lg border-none bg-white py-2 text-base font-semibold text-black outline-none transition hover:brightness-95"
+                                className="w-full rounded-lg border-none bg-white py-2 text-base font-semibold text-black outline-none transition hover:brightness-95 disabled:opacity-50"
+                                disabled={isPending}
                             >
-                                Submit
+                                {isPending ? 'Submitting...' : 'Submit'}
                             </button>
                         </div>
                     </form>
