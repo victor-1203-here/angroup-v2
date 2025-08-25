@@ -53,7 +53,7 @@ export default function Services() {
                                 <h3 className="mb-2 text-xl text-[#38947e]">1. Our Energy Solutions</h3>
                                 <p className="text-lg text-gray-700">
                                     An Group offers a full suite of petroleum and chemical distribution services designed to meet the demands of
-                                    modern industry. From diesel, fuel oil, LPG, and LNG to specialty chemicals and lubricants, our solutions are
+                                    modern industry. From diesel, fuel oil, and LPG to specialty chemicals and lubricants, our solutions are
                                     tailored to support operational efficiency, business growth, and long-term reliability across Asia and Europe.
                                 </p>
                             </div>

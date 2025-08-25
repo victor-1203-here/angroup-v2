@@ -217,7 +217,7 @@ export default function Contact() {
                         </div>
                     </form>
 
-                    <div className="mb-4 mt-2 grid grid-cols-3 gap-x-1 gap-y-4 text-white text-[12px] md:block md:w-1/2 md:max-w-xs md:pr-8 md:text-base">
+                    <div className="mb-4 mt-2 grid grid-cols-3 gap-x-1 gap-y-4 text-white text-[11px] md:block md:w-1/2 md:max-w-xs md:pr-8 md:text-base">
                         <div className="md:mb-4">
                             <span className="uppercase text-[#102a00]">Headquarters :</span>
                             <br />

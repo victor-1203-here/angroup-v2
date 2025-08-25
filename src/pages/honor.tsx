@@ -12,16 +12,14 @@ const honorsData = [
         year: '2015',
         awards: [
             {
-                title: 'Commercial Dealer (Northern Region)',
-                achievement: 'Champion - Top Volume Performer',
-            },
-            {
-                title: 'Commercial Dealer (Northern Region)',
+                title: 'National Sales Award',
                 achievement: '2nd Runner Up - Top Volume Performer',
+                img: '/v2/images/honor/2015/T1.jpg',
             },
             {
-                title: 'Regional Sales Award (Northern Region)',
+                title: 'National Sales Award',
                 achievement: 'Champion - Top Volume Performer',
+                img: '/v2/images/honor/2015/T2.jpg',
             },
         ],
     },
@@ -29,16 +27,14 @@ const honorsData = [
         year: '2016',
         awards: [
             {
-                title: 'Commercial Dealer (Northern Region)',
+                title: 'Regional Sales Award',
                 achievement: 'Champion - Top Volume Performer',
+                img: '/v2/images/honor/2016/T1.jpg',
             },
             {
-                title: 'Commercial Dealer (Northern Region)',
-                achievement: '2nd Runner Up - Top Volume Performer',
-            },
-            {
-                title: 'Regional Sales Award (Northern Region)',
-                achievement: 'Champion - Top Volume Performer',
+                title: 'National Sales Award',
+                achievement: '1st Runner Up - Top Volume Performer',
+                img: '/v2/images/honor/2016/T2.jpg',
             },
         ],
     },
@@ -46,63 +42,14 @@ const honorsData = [
         year: '2017',
         awards: [
             {
-                title: 'Commercial Dealer (Northern Region)',
+                title: 'Regional Sales Award',
                 achievement: 'Champion - Top Volume Performer',
+                img: '/v2/images/honor/2017/T1.jpg',
             },
             {
-                title: 'Commercial Dealer (Northern Region)',
+                title: 'National Sales Award',
                 achievement: '2nd Runner Up - Top Volume Performer',
-            },
-            {
-                title: 'Regional Sales Award (Northern Region)',
-                achievement: 'Champion - Top Volume Performer',
-            },
-            {
-                title: 'Special Appreciation',
-                achievement: 'Top Volume Performer (20M+ liters p.a.)',
-            },
-        ],
-    },
-    {
-        year: '2018',
-        awards: [
-            {
-                title: 'Commercial Dealer (Northern Region)',
-                achievement: 'Champion - Top Volume Performer',
-            },
-            {
-                title: 'Commercial Dealer (Northern Region)',
-                achievement: '2nd Runner Up - Top Volume Performer',
-            },
-            {
-                title: 'Regional Sales Award (Northern Region)',
-                achievement: 'Champion - Top Volume Performer',
-            },
-            {
-                title: 'Special Appreciation',
-                achievement: 'Top Volume Performer',
-            },
-        ],
-    },
-    {
-        year: '2019',
-        awards: [
-            {
-                title: 'Special Appreciation',
-                achievement: 'Top Volume Performer',
-            },
-        ],
-    },
-    {
-        year: '2018',
-        awards: [
-            {
-                title: 'Commercial Business Partner Excellence Award (CBPEA)',
-                achievement: 'Champion - Top 3 Northern Region',
-            },
-            {
-                title: 'Shell Award for Oil Bunkering in Malaysia',
-                achievement: 'Awarded to Group Subsidiary',
+                img: '/v2/images/honor/2017/T2.jpg',
             },
         ],
     },
@@ -110,12 +57,14 @@ const honorsData = [
         year: '2020',
         awards: [
             {
-                title: 'Commercial Channel Partnet Submit',
-                achievement: 'Nothern Region 2020 CHAMPION',
+                title: 'Commercial Channel Partner Submit',
+                achievement: 'Champion - Nothern Region 2020',
+                img: '/v2/images/honor/2020/T1.jpg',
             },
             {
-                title: 'Commercial Channel Partnet Submit',
-                achievement: 'NATIONAL Award 2020 2nd Runner Up',
+                title: 'Commercial Channel Partner Submit',
+                achievement: '2nd Runner Up - National Award 2020',
+                img: '/v2/images/honor/2020/T2.jpg',
             },
         ],
     },
@@ -123,8 +72,9 @@ const honorsData = [
         year: '2024',
         awards: [
             {
-                title: 'Commercial Business Partnet Excellence Award (CBPEA)',
+                title: 'Commercial Business Partner Excellence Award (CBPEA)',
                 achievement: 'Champion - Top 3 Northern Region',
+                img: '/v2/images/honor/2024/T1.jpg',
             },
         ],
     },
@@ -136,7 +86,6 @@ const licenses = [
     { img: '/v2/images/honor/pda_03.png' },
     { img: '/v2/images/honor/pda_04.png' },
     { img: '/v2/images/honor/pda_05.png' },
-    { img: '/v2/images/honor/pda_06.png' },
 ];
 
 const locations = [
@@ -259,8 +208,21 @@ export default function Honor() {
                                                         {awards.map((award, idx) => (
                                                             <tr key={year + idx}>
                                                                 <td className="py-1 pr-4 text-white">{idx === 0 ? year : ''}</td>
-                                                                <td className="py-1 pr-4 text-white">{award.title}</td>
-                                                                <td className="py-1 text-white">{award.achievement}</td>
+                                                                <td className="py-1 pr-4 text-white">
+                                                                    {award.title}
+                                                                </td>
+                                                                <td className="py-1">
+                                                                    <button
+                                                                        type='button'
+                                                                        className='text-white underline cursor-pointer'
+                                                                        onClick={() => {
+                                                                            if (!award.img) return;
+                                                                            setPreviewSrc(award.img);
+                                                                            setTimeout(() => setShowModal(true), 10);
+                                                                        }}>
+                                                                        {award.achievement}
+                                                                    </button>
+                                                                </td>
                                                             </tr>
                                                         ))}
                                                     </tbody>
@@ -275,8 +237,18 @@ export default function Honor() {
                                                     <ul className="space-y-3">
                                                         {awards.map((award, idx) => (
                                                             <li key={idx} className="rounded bg-white p-3 shadow">
-                                                                <div className="font-semibold">{award.title}</div>
-                                                                <div className="text-sm">{award.achievement}</div>
+                                                                <button
+                                                                    type='button'
+                                                                    className='w-full text-left cursor-pointer hover:underline'
+                                                                    onClick={() => {
+                                                                        if (!award.img) return;
+                                                                        setPreviewSrc(award.img);
+                                                                        setTimeout(() => setShowModal(true), 10);
+                                                                    }}
+                                                                    >
+                                                                        <div className="font-semibold">{award.title}</div>
+                                                                        <div className="text-sm">{award.achievement}</div>
+                                                                    </button>
                                                             </li>
                                                         ))}
                                                     </ul>
@@ -326,36 +298,35 @@ export default function Honor() {
                                                 </SwiperSlide>
                                             ))}
                                         </Swiper>
-
-                                        {previewSrc && (
-                                            <div
-                                                className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70"
-                                                onClick={closeWithAnim}
-                                            >
-                                                <div className={`relative max-w-[90vw] md:max-w-[75vw] transform transition-all duration-300 ${showModal ? "scale-100 opacity-100" :"scale-95 opacity-0"}`}
-                                                >
-                                                <Image
-                                                    src={previewSrc}
-                                                    alt="expanded license"
-                                                    width={1600}
-                                                    height={1200}
-                                                    className="h-[95vh] w-full rounded shadow-xl"
-                                                />
-                                                <button
-                                                    className="absolute -right-3 -top-3 rounded-full bg-white/90 px-3 py-1 text-2xl font-bold leading-none text-gray-800"
-                                                    onClick={closeWithAnim}
-                                                    aria-label="Close preview"
-                                                >
-                                                    ×
-                                                </button>
-                                                </div>
-                                            </div>
-                                            )}
                                     </div>
                                 )}
                             </div>
                         </div>
                     </div>
+                    {previewSrc && (
+                        <div
+                            className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70"
+                            onClick={closeWithAnim}
+                        >
+                            <div className={`relative transform transition-all duration-300 ${showModal ? "scale-100 opacity-100" : "scale-95 opacity-0"} max-w-[90vw] md:max-w-[75vw] p-4 flex items-center justify-center`}>
+                            <Image
+                                src={previewSrc}
+                                alt="preview"
+                                width={1600}
+                                height={1200}
+                                className="max-h-[80vh] max-w-[90vw] h-auto w-auto object-contain mx-auto"
+                                sizes="(max-width: 768px) 90vw, 75vw"
+                            />
+                            <button
+                                className="absolute -right-3 -top-3 rounded-full bg-white/90 px-3 py-1 text-2xl font-bold leading-none text-gray-800"
+                                onClick={closeWithAnim}
+                                aria-label="Close preview"
+                            >
+                                ×
+                            </button>
+                            </div>
+                        </div>
+                    )}
                     <div className="flex hidden min-h-[300px] w-full items-center justify-center md:relative md:my-8 md:block md:min-h-[500px] md:w-1/2 md:py-20">
                         <Image
                             src="/v2/images/honor/map_2.png"
