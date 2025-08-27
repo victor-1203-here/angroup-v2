@@ -212,16 +212,7 @@ export default function Honor() {
                                                                     {award.title}
                                                                 </td>
                                                                 <td className="py-1">
-                                                                    <button
-                                                                        type='button'
-                                                                        className='text-white underline cursor-pointer'
-                                                                        onClick={() => {
-                                                                            if (!award.img) return;
-                                                                            setPreviewSrc(award.img);
-                                                                            setTimeout(() => setShowModal(true), 10);
-                                                                        }}>
-                                                                        {award.achievement}
-                                                                    </button>
+                                                                    {award.achievement}
                                                                 </td>
                                                             </tr>
                                                         ))}
@@ -237,18 +228,8 @@ export default function Honor() {
                                                     <ul className="space-y-3">
                                                         {awards.map((award, idx) => (
                                                             <li key={idx} className="rounded bg-white p-3 shadow">
-                                                                <button
-                                                                    type='button'
-                                                                    className='w-full text-left cursor-pointer hover:underline'
-                                                                    onClick={() => {
-                                                                        if (!award.img) return;
-                                                                        setPreviewSrc(award.img);
-                                                                        setTimeout(() => setShowModal(true), 10);
-                                                                    }}
-                                                                    >
-                                                                        <div className="font-semibold">{award.title}</div>
-                                                                        <div className="text-sm">{award.achievement}</div>
-                                                                    </button>
+                                                                <div className="font-semibold">{award.title}</div>
+                                                                <div className="text-sm">{award.achievement}</div>
                                                             </li>
                                                         ))}
                                                     </ul>
