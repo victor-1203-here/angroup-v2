@@ -211,7 +211,7 @@ export default function Honor() {
                                                                 <td className="py-1 pr-4 text-white">
                                                                     {award.title}
                                                                 </td>
-                                                                <td className="py-1">
+                                                                <td className="py-1 text-white">
                                                                     {award.achievement}
                                                                 </td>
                                                             </tr>
