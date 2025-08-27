@@ -5,13 +5,13 @@ import Image from 'next/image';
 const directors = [
     {
         name: 'Tan Than Kau',
-        photo: '/v2/images/about/Mr Tan.jpg',
+        photo: '/images/about/Mr Tan.jpg',
         title: 'Founder\nManaging Director',
         tagline: 'Transforming passion into global energy solutions',
     },
     {
         name: 'Christine Ng Saw Kheng',
-        photo: '/v2/images/about/Ms Christine.jpg',
+        photo: '/images/about/Ms Christine.jpg',
         title: 'Executive Director',
         tagline: 'Mastering the financial pulse of petrochemical trade',
     },
@@ -27,7 +27,7 @@ export default function About() {
 
             <section className="relative flex flex-col h-screen w-full">
                 <Image
-                    src="/v2/images/about/pic_01.jpg"
+                    src="/images/about/pic_01.jpg"
                     alt="About Us Story"
                     style={{
                         position: 'absolute',
@@ -82,7 +82,7 @@ export default function About() {
                     <div className="z-10 mt-8 flex w-full items-center justify-center md:mt-0 md:w-2/3 md:justify-start">
                         <div className="flex h-72 w-72 items-center justify-center overflow-hidden rounded-full shadow-2xl shadow-black md:h-[32rem] md:w-[32rem]">
                             <Image
-                                src="/v2/images/about/circle_bg.jpg"
+                                src="/images/about/circle_bg.jpg"
                                 alt="Refinery workers"
                                 width={512}
                                 height={512}
@@ -97,7 +97,7 @@ export default function About() {
             {/* Third Section */}
             <section className="relative h-screen w-full">
                 <Image
-                    src="/v2/images/about/pic_02.jpg"
+                    src="/images/about/pic_02.jpg"
                     alt="About Us Leaders"
                     style={{
                         position: 'absolute',

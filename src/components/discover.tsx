@@ -15,7 +15,7 @@ export default function Discover() {
                 <div className="relative hidden min-h-[370px] w-full items-center justify-between md:flex md:min-h-[430px] md:p-2">
                     <div className="relative mx-2 flex-1 overflow-hidden rounded-[1.5rem]">
                         <Image
-                            src="/v2/images/home/our_story.jpg"
+                            src="/images/home/our_story.jpg"
                             alt="Our Story"
                             width={600}
                             height={384}
@@ -38,7 +38,7 @@ export default function Discover() {
 
                     <div className="relative mx-2 min-w-[300px] flex-1 overflow-hidden rounded-[1.5rem]">
                         <Image
-                            src="/v2/images/home/achievements.jpg"
+                            src="/images/home/achievements.jpg"
                             alt="Achievements & Awards"
                             width={600}
                             height={384}
@@ -60,7 +60,7 @@ export default function Discover() {
 
                     <div className="relative mx-2 min-w-[300px] flex-1 overflow-hidden rounded-[1.5rem]">
                         <Image
-                            src="/v2/images/home/inside_an_group.jpg"
+                            src="/images/home/inside_an_group.jpg"
                             alt="Inside An Group"
                             width={600}
                             height={384}
@@ -91,7 +91,7 @@ export default function Discover() {
                         <SwiperSlide>
                             <div className="relative">
                                 <Image
-                                    src="/v2/images/home/our_story.jpg"
+                                    src="/images/home/our_story.jpg"
                                     alt="Our Story"
                                     width={600}
                                     height={256}
@@ -114,7 +114,7 @@ export default function Discover() {
                         <SwiperSlide>
                             <div className="relative">
                                 <Image
-                                    src="/v2/images/home/achievements.jpg"
+                                    src="/images/home/achievements.jpg"
                                     alt="Achievements & Awards"
                                     width={600}
                                     height={256}
@@ -137,7 +137,7 @@ export default function Discover() {
                         <SwiperSlide>
                             <div className="relative">
                                 <Image
-                                    src="/v2/images/home/inside_an_group.jpg"
+                                    src="/images/home/inside_an_group.jpg"
                                     alt="Inside An Group"
                                     width={600}
                                     height={256}

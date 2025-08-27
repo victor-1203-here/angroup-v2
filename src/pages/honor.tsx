@@ -14,12 +14,12 @@ const honorsData = [
             {
                 title: 'National Sales Award',
                 achievement: '2nd Runner Up - Top Volume Performer',
-                img: '/v2/images/honor/2015/T1.jpg',
+                img: '/images/honor/2015/T1.jpg',
             },
             {
                 title: 'National Sales Award',
                 achievement: 'Champion - Top Volume Performer',
-                img: '/v2/images/honor/2015/T2.jpg',
+                img: '/images/honor/2015/T2.jpg',
             },
         ],
     },
@@ -29,12 +29,12 @@ const honorsData = [
             {
                 title: 'Regional Sales Award',
                 achievement: 'Champion - Top Volume Performer',
-                img: '/v2/images/honor/2016/T1.jpg',
+                img: '/images/honor/2016/T1.jpg',
             },
             {
                 title: 'National Sales Award',
                 achievement: '1st Runner Up - Top Volume Performer',
-                img: '/v2/images/honor/2016/T2.jpg',
+                img: '/images/honor/2016/T2.jpg',
             },
         ],
     },
@@ -44,12 +44,12 @@ const honorsData = [
             {
                 title: 'Regional Sales Award',
                 achievement: 'Champion - Top Volume Performer',
-                img: '/v2/images/honor/2017/T1.jpg',
+                img: '/images/honor/2017/T1.jpg',
             },
             {
                 title: 'National Sales Award',
                 achievement: '2nd Runner Up - Top Volume Performer',
-                img: '/v2/images/honor/2017/T2.jpg',
+                img: '/images/honor/2017/T2.jpg',
             },
         ],
     },
@@ -59,12 +59,12 @@ const honorsData = [
             {
                 title: 'Commercial Channel Partner Submit',
                 achievement: 'Champion - Nothern Region 2020',
-                img: '/v2/images/honor/2020/T1.jpg',
+                img: '/images/honor/2020/T1.jpg',
             },
             {
                 title: 'Commercial Channel Partner Submit',
                 achievement: '2nd Runner Up - National Award 2020',
-                img: '/v2/images/honor/2020/T2.jpg',
+                img: '/images/honor/2020/T2.jpg',
             },
         ],
     },
@@ -74,18 +74,18 @@ const honorsData = [
             {
                 title: 'Commercial Business Partner Excellence Award (CBPEA)',
                 achievement: 'Champion - Top 3 Northern Region',
-                img: '/v2/images/honor/2024/T1.jpg',
+                img: '/images/honor/2024/T1.jpg',
             },
         ],
     },
 ];
 
 const licenses = [
-    { img: '/v2/images/honor/pda_01.png' },
-    { img: '/v2/images/honor/pda_02.png' },
-    { img: '/v2/images/honor/pda_03.png' },
-    { img: '/v2/images/honor/pda_04.png' },
-    { img: '/v2/images/honor/pda_05.png' },
+    { img: '/images/honor/pda_01.png' },
+    { img: '/images/honor/pda_02.png' },
+    { img: '/images/honor/pda_03.png' },
+    { img: '/images/honor/pda_04.png' },
+    { img: '/images/honor/pda_05.png' },
 ];
 
 const locations = [
@@ -141,7 +141,7 @@ export default function Honor() {
 
             <section className="relative flex h-screen w-full flex-col">
                 <Image
-                    src="/v2/images/honor/main.jpg"
+                    src="/images/honor/main.jpg"
                     alt="About Us Story"
                     style={{
                         position: 'absolute',
@@ -310,7 +310,7 @@ export default function Honor() {
                     )}
                     <div className="flex hidden min-h-[300px] w-full items-center justify-center md:relative md:my-8 md:block md:min-h-[500px] md:w-1/2 md:py-20">
                         <Image
-                            src="/v2/images/honor/map_2.png"
+                            src="/images/honor/map_2.png"
                             alt="World Map"
                             width={600}
                             height={450}
